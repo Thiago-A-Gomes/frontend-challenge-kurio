@@ -1,0 +1,34 @@
+/* Painel de autenticação sobre a loja, conforme o frame de login. */
+.auth-dialog { width: min(500px, calc(100vw - 32px)); min-height: 600px; padding: 44px 80px 80px; border: 1px solid #573320; border-bottom: 8px solid var(--accent); border-radius: 0; }
+.auth-dialog .dialog-close { top: 16px; right: 16px; color: var(--accent); font-size: 26px; }
+.auth-dialog .auth-switch { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 20px; font-weight: 500; margin: 0 -32px 32px; }
+.auth-switch a { color: #f5f1eb; white-space: nowrap; }
+.auth-switch a.is-selected { color: var(--accent); }
+.auth-switch > span { color: #cfb28c; }
+.auth-dialog .auth-description { margin: 0 -32px 24px; color: #f5f1eb; font-size: 13px; line-height: 1.5; }
+.auth-dialog form { gap: 16px; }
+.auth-dialog input { width: 100%; min-width: 0; min-height: 48px; background: transparent; }
+/* O campo e o botão do olho compartilham a mesma caixa, sem depender da largura do texto. */
+.auth-dialog .password-input { position: relative; display: block; width: 100%; }
+.auth-dialog .password-input input { width: 100%; padding-right: 52px; }
+.auth-dialog .password-input > button { position: absolute; top: 0; right: 8px; bottom: 0; left: auto; display: grid; place-items: center; width: 36px; padding: 8px; border: 0; background: transparent; color: var(--muted); }
+.auth-dialog .password-input svg { display: block; width: 20px; height: 20px; }
+.auth-dialog .auth-forgot { align-self: flex-end; padding: 0; border: 0; background: transparent; color: var(--accent); font-size: 14px; text-decoration: underline; }
+.auth-dialog #auth-error:empty { display: none; }
+.auth-dialog #auth-error { font-size: 12px; }
+.auth-dialog .auth-submit { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin-top: 8px; padding: 12px 20px; border: 1px solid var(--accent); border-radius: 5px; background: var(--accent); color: #140d0a; font-size: 16px; font-weight: 700; transition: background-color 160ms ease; }
+.auth-dialog .auth-submit:hover { background: #fff; border-color: #fff; filter: none; }
+.auth-divider { display: flex; align-items: center; gap: 12px; margin: 28px -80px 20px; font-size: 12px; white-space: nowrap; }
+.auth-divider::before, .auth-divider::after { content: ''; height: 1px; flex: 1; background: #483124; }
+.auth-social { display: flex; flex-direction: column; gap: 16px; }
+.auth-social > button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; padding: 12px 16px; border: 1px solid #573320; border-radius: 5px; background: transparent; color: #cfb28c; font-size: 14px; font-weight: 400; line-height: 22px; gap: 14px; }
+.auth-social > button:hover { background: #38220f; border-color: var(--accent); filter: none; }
+.auth-social svg { display: block; flex: 0 0 22px; width: 22px; height: 22px; color: #6587ca; }
+.auth-social .google-mark { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 22px; width: 22px; height: 22px; line-height: 1; }
+.google-mark { font-size: 25px; font-weight: 700; background: conic-gradient(#4285f4 0 90deg, #34a853 90deg 160deg, #fbbc05 160deg 220deg, #ea4335 220deg 290deg, #4285f4 290deg); color: transparent; background-clip: text; }
+@media (max-width: 640px) {
+  .auth-dialog { padding: 48px 24px 40px; min-height: 0; }
+  .auth-dialog .auth-switch { font-size: 20px; margin: 0 0 28px; }
+  .auth-dialog .auth-description { margin: 0 0 24px; font-size: 13px; }
+  .auth-divider { margin-inline: -24px; }
+}

@@ -1,0 +1,2 @@
+Exporte a imagem do personagem do Figma como PNG e salve nesta pasta
+com o nome personagem.png. A página a mostrará automaticamente.

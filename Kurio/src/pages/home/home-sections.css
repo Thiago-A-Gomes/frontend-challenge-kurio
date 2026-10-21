@@ -1,0 +1,8 @@
+/* Espaçamento entre blocos conforme a referência, sem divisórias adicionais. */
+.home-editorial, .home-journal { margin-top: 96px; }
+.home-editorial > *, .home-journal > * { margin-top: 0; }
+.market-page-heading { margin: 40px 0 32px; }
+.market-page-heading h1 { text-transform: none; font-size: 30px; letter-spacing: 0; line-height: 1.4; }
+.market-page-heading p { color: var(--muted); font-size: 13px; line-height: 1.7; }
+.market-page-heading + .marketplace { margin-top: 0; }
+@media (max-width: 640px) { .home-editorial, .home-journal { margin-top: 48px; } }

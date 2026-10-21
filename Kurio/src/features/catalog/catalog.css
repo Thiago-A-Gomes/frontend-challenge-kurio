@@ -1,0 +1,407 @@
+/* ==========================================================
+   MERCADO — passo 1: layout e lista de coleções.
+   As medidas abaixo são aproximações da captura do Figma.
+   ========================================================== */
+
+.marketplace {
+  /* Grid divide esta seção em colunas: filtros e catálogo. */
+  display: grid;
+
+  /*
+    A lateral ocupa 280px; 1fr entrega o espaço restante ao catálogo.
+    minmax(0, 1fr) permite que o catálogo encolha sem forçar a página
+    a ficar mais larga que a janela.
+  */
+  grid-template-columns: 280px minmax(0, 1fr);
+
+  /* gap separa as colunas; margin-top afasta esta seção do destaque. */
+  gap: 48px;
+  margin-top: 96px;
+
+  /* Impede que a lateral seja esticada até a altura do catálogo. */
+  align-items: start;
+}
+
+.marketplace-sidebar {
+  background-color: transparent;
+
+  /* Espaço interno entre a borda da lateral e seu conteúdo. */
+  padding: 0;
+}
+
+.marketplace-sidebar h2 {
+  /* Remove a margem padrão e deixa um espaço abaixo do título. */
+  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.collection-list {
+  /* Remove as bolinhas e os espaçamentos padrão da lista ul. */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.collection-button {
+  /* Cada botão ocupa toda a largura disponível da lista. */
+  width: 100%;
+
+  /* Flex organiza os dois spans na mesma linha. */
+  display: flex;
+
+  /* Empurra o nome para a esquerda e a quantidade para a direita. */
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  /* O botão continua sendo clicável, mas sem a aparência padrão. */
+  border: 0;
+  background-color: transparent;
+  color: var(--muted);
+  padding: 12px 8px;
+  text-align: left;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.collection-button:hover {
+  /* Feedback visual ao passar o mouse; o filtro ainda não foi implementado. */
+  background-color: #352219;
+  color: var(--accent);
+}
+
+.collection-button span:last-child {
+  /* last-child seleciona o último span: a quantidade da coleção. */
+  flex-shrink: 0;
+}
+
+.marketplace-content {
+  /* Permite que o conteúdo encolha dentro da coluna do Grid. */
+  min-width: 0;
+}
+
+/* Em telas intermediárias, a lateral fica mais estreita. */
+@media (max-width: 1000px) {
+  .marketplace {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 24px;
+  }
+}
+
+/*
+  No celular usamos uma única coluna: filtros em cima e catálogo abaixo.
+  Esta adaptação é uma proposta; podemos ajustar se houver um Figma mobile.
+*/
+@media (max-width: 640px) {
+  .marketplace {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: 48px;
+  }
+}
+
+/* CATÁLOGO — card reutilizável, com medidas aproximadas da referência. */
+.marketplace-toolbar {
+  margin-bottom: 32px;
+}
+
+.catalog-title {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--accent);
+}
+
+.nft-grid {
+  display: grid;
+  /* repeat cria três colunas iguais; cada uma recebe uma fração do espaço. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px 24px;
+}
+
+.nft-card {
+  /* Evita que textos grandes forcem a coluna a ultrapassar sua largura. */
+  min-width: 0;
+}
+
+.nft-card-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+.nft-card-art {
+  /*
+    Moldura marrom da referência: padding é o espaço entre a imagem e a
+    borda do container. Não altera o fundo creme incorporado no próprio PNG.
+    border-box da base inclui esse espaço no tamanho total do card.
+  */
+  padding: 16px 8px 20px;
+  background: #261813;
+  /* A moldura tem cantos retos; somente a imagem interna é arredondada. */
+  border-radius: 0;
+  overflow: hidden;
+  /* Centraliza a imagem nos dois eixos, sem deslocar o fundo. */
+  display: grid;
+  place-items: center;
+  /* Reserva uma área quadrada, mesmo antes do carregamento da imagem. */
+  aspect-ratio: 1;
+}
+
+.nft-card-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Preenche a área sem distorcer o personagem. */
+  object-fit: cover;
+  /* Mantém o recorte centralizado, inclusive em arquivos não quadrados. */
+  object-position: center;
+  /* Os cantos da foto ficam arredondados dentro da moldura marrom. */
+  border-radius: 12px;
+}
+
+.nft-card h3 {
+  margin: 12px 0 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+.nft-card-price {
+  margin: 0;
+  color: var(--accent);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .nft-grid {
+    /* Em telas intermediárias, duas colunas preservam o tamanho dos cards. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .nft-grid {
+    gap: 24px 12px;
+  }
+}
+
+/* Alternativa enquanto as imagens originais dos cards não foram adicionadas. */
+.nft-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  /* Usa o fundo do container para evitar duas camadas com cores diferentes. */
+  background: transparent;
+  color: #263e32;
+  text-align: center;
+}
+
+.nft-image-placeholder > span {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.nft-previous-price {
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Esconde visualmente um texto, mantendo-o disponível para leitores de tela. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Seção completa: painel de filtros, oferta, controles e paginação. */
+.catalog-filter-panel {
+  background: #261813;
+  padding: 24px 20px;
+}
+
+.catalog-filter-group {
+  /* fieldset agrupa campos relacionados sem a borda padrão do navegador. */
+  border: 0;
+  padding: 0;
+  margin: 32px 0 0;
+  min-width: 0;
+}
+.catalog-filter-group legend {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+.catalog-filter-group input[type="range"] {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  accent-color: var(--accent);
+}
+/* Dois controles nativos compartilham a barra, com cada marcador acessível por Tab. */
+.price-range-control { position: relative; height: 24px; margin: 4px 0; }
+.price-range-control::before { content: ''; position: absolute; top: 11px; left: 0; right: 0; height: 3px; background: var(--accent); border-radius: 2px; }
+.catalog-filter-group .price-range-control input[type="range"] { appearance: none; position: absolute; inset: 0; width: 100%; height: 24px; min-height: 0; margin: 0; padding: 0; border: 0; background: transparent; pointer-events: none; }
+.price-range-control input::-webkit-slider-runnable-track { height: 3px; background: transparent; }
+.price-range-control input::-webkit-slider-thumb { appearance: none; width: 14px; height: 14px; margin-top: -5.5px; border: 1px solid #efbb80; border-radius: 50%; background: var(--accent); pointer-events: auto; cursor: grab; }
+.price-range-control input::-moz-range-track { height: 3px; background: transparent; }
+.price-range-control input::-moz-range-thumb { width: 12px; height: 12px; border: 1px solid #efbb80; border-radius: 50%; background: var(--accent); pointer-events: auto; cursor: grab; }
+.price-caption {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.filter-apply {
+  font-size: 12px;
+  padding: 8px 12px;
+}
+.featured-nft {
+  margin-top: 20px;
+  padding-top: 20px;
+  background: linear-gradient(#261813, transparent 38%);
+}
+.featured-nft h2 {
+  margin: 0 16px 10px;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.featured-nft > p {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 12px;
+  font-weight: bold;
+}
+.featured-art {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #d8d3b5;
+}
+.featured-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+}
+.marketplace-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.catalog-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.catalog-category {
+  background: transparent;
+  color: inherit;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  padding: 0 0 8px;
+  font-size: 12px;
+}
+.catalog-category.is-current {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.catalog-sort-note {
+  color: var(--muted);
+  font-size: 11px;
+}
+.catalog-pagination {
+  /* Só este nav recebe estas regras; a navegação do cabeçalho fica preservada. */
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 56px;
+}
+.catalog-pagination button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #483124;
+  border-radius: 3px;
+  background: transparent;
+  color: inherit;
+}
+.catalog-pagination button[aria-current="page"] {
+  background: var(--accent);
+  color: #140d0a;
+}
+@media (max-width: 640px) {
+  .featured-nft {
+    /* Preserva a oferta no celular, sem ocupar toda a largura com a imagem. */
+    max-width: 280px;
+    margin-inline: auto;
+  }
+  .catalog-categories { gap: 12px; }
+  .catalog-pagination { justify-content: center; }
+}
+
+/* Medida identificada na captura do Figma: botão Aplicar de 92 × 36px. */
+.filter-apply {
+  width: 92px;
+  height: 36px;
+  padding: 0 12px;
+}
+
+.catalog-pagination button {
+  /* Centraliza os números e a seta nos dois eixos. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+}
+
+.catalog-category {
+  /* Mantém as três legendas com a mesma altura de linha. */
+  line-height: 1.5;
+}
+
+/* Título Coleções: valores específicos confirmados no Figma.
+   O seletor é restrito ao painel, preservando o título do NFT em destaque. */
+.catalog-filter-panel > h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #f5f1eb;
+}
+
+/* O número da página atual também é um botão laranja. */
+.catalog-pagination button[aria-current="page"]:hover,
+.catalog-pagination button[aria-current="page"]:focus-visible {
+  background: #fff;
+  color: #140d0a;
+  filter: none;
+}

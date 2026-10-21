@@ -1,0 +1,287 @@
+/* Seções inferiores da página inicial. Medidas aproximadas da captura;
+   os breakpoints reorganizam o conteúdo sem larguras fixas no celular. */
+.promotional-banners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 96px;
+}
+.promotion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background: #261813;
+  min-width: 0;
+  /* Aproxima a proporção larga e baixa vista na referência ampliada. */
+  aspect-ratio: 2.34;
+}
+.promotion-art {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.promotion-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.promotion-art::after {
+  /* Curva laranja decorativa feita em CSS; não faz parte da foto. */
+  content: '';
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  left: -140px;
+  bottom: -95px;
+  pointer-events: none;
+}
+.promotion-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* gap controla o espaço entre título, descrição e botão sem somar margens. */
+  gap: 8px;
+  padding: 32px 8px;
+  min-width: 0;
+  text-align: center;
+}
+.promotion h2 { font-size: 18px; line-height: 24px; margin: 0; }
+.promotion p { color: var(--muted); font-size: 14px; line-height: 24px; margin: 0; }
+.promotion .button {
+  /* Mesmo tamanho e alinhamento nos dois banners, incluindo o link Explorar. */
+  width: 140px;
+  max-width: 100%;
+  min-height: 40px;
+  flex-shrink: 0;
+  /* Absorve espaço livre e alinha os botões pela base quando o texto varia. */
+  margin: auto 0 0;
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+.mint-journal { margin-top: 96px; }
+.journal-heading { text-align: center; margin-bottom: 36px; }
+.journal-heading h2 { font-size: 28px; line-height: 1.4; margin: 0 0 12px; }
+.journal-heading p { color: var(--muted); font-size: 12px; line-height: 1.7; margin: 0; }
+.journal-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.journal-card { display: flex; flex-direction: column; background: #261813; min-width: 0; }
+.journal-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.35;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px 12px 0 0;
+}
+.journal-card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Estica a parte textual para alinhar Ler mais nos quatro artigos. */
+  flex: 1;
+  padding: 12px 16px 16px;
+}
+.journal-card p { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 8px 0; }
+.journal-card .journal-meta { font-size: 10px; margin-top: 0; }
+.journal-card h3 { margin: 12px 0 8px; font-size: 14px; line-height: 1.5; }
+.journal-card h3 button, .journal-read {
+  background: transparent; border: 0; padding: 0; color: inherit;
+  font: inherit; text-align: left;
+}
+.journal-card h3 button:hover { text-decoration: underline; }
+.journal-read {
+  color: var(--accent);
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: auto;
+  /* Área interna separa o botão da descrição sem depender da quantidade de linhas. */
+  padding-top: 4px;
+}
+
+.home-footer { margin-top: 96px; background: #261813; }
+.footer-benefits, .footer-brand-row, .footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  /* Laterais menores mantêm as quatro colunas alinhadas à referência. */
+  padding: 32px 20px;
+}
+.footer-benefit { border-right: 1px solid #77503a; padding-right: 16px; }
+.benefit-symbol {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--accent); color: #140d0a; font-size: 24px;
+  margin-bottom: 16px;
+}
+.home-footer h2 { font-size: 14px; line-height: 1.5; margin: 0 0 12px; }
+.home-footer p { font-size: 12px; line-height: 1.7; margin: 0; color: var(--muted); }
+.newsletter-field { display: flex; margin: 12px 0; }
+.newsletter-field input {
+  /* min-width:0 permite encolher o input ao lado do botão sem overflow. */
+  min-width: 0; width: 100%; padding: 8px 12px;
+  background: #402715; border: 1px solid #77503a; color: #f5f1eb;
+  font-size: 11px; border-radius: 4px 0 0 4px;
+}
+.newsletter-field input::placeholder { color: var(--muted); }
+.newsletter-field input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.newsletter-field .button { padding: 8px 12px; border-radius: 0 4px 4px 0; font-size: 12px; }
+.newsletter-field .button { flex-shrink: 0; margin: 0; }
+.footer-brand-row {
+  background: #3a2410;
+  align-items: center;
+  /* A faixa da marca é mais compacta que as áreas de conteúdo. */
+  padding-block: 24px;
+}
+.footer-brand-row p, .footer-brand-row span { font-size: 11px; }
+.footer-links ul { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin: 6px 0; }
+.footer-links li button {
+  background: transparent; border: 0; padding: 0;
+  color: var(--muted); font-size: 11px; line-height: 1.7; text-align: left;
+}
+.footer-links li button:hover { text-decoration: underline; }
+.social-buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.social-buttons button {
+  display: grid; place-items: center; width: 28px; height: 28px; flex-shrink: 0;
+  background: transparent; border: 1px solid var(--accent); border-radius: 3px;
+  color: var(--accent); font-size: 12px; padding: 0;
+}
+.footer-social .wallet-heading { margin-top: 24px; }
+.home-footer .wallet-brands { font-size: 9px; color: var(--accent); }
+.home-footer .footer-copyright {
+  background: #140d0a; text-align: center; padding: 12px 16px; font-size: 10px;
+}
+
+@media (max-width: 1000px) {
+  .promotional-banners { gap: 24px; }
+  .promotion { grid-template-columns: 1fr; aspect-ratio: auto; }
+  .promotion-art { aspect-ratio: 1.5; }
+  .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-benefits, .footer-brand-row, .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-benefit:nth-child(2) { border-right: 0; }
+}
+@media (max-width: 640px) {
+  .promotional-banners, .mint-journal, .home-footer { margin-top: 48px; }
+  .promotional-banners { grid-template-columns: 1fr; }
+  .promotion { grid-template-columns: 1fr 1fr; }
+  .promotion-art { aspect-ratio: auto; }
+  .promotion h2 { font-size: 13px; }
+  .promotion p { font-size: 11px; line-height: 20px; }
+  .promotion-copy { padding: 20px 12px; gap: 12px; }
+  .promotion .button { width: 120px; }
+  .journal-heading h2 { font-size: 23px; }
+  .journal-grid { gap: 16px; }
+  .journal-card-copy { padding: 10px; }
+  .journal-card h3 { font-size: 12px; }
+  .journal-card p { font-size: 11px; }
+  .footer-benefits, .footer-brand-row, .footer-links { padding: 24px 16px; gap: 24px 16px; }
+  .footer-benefit { padding-right: 0; border: 0; }
+  .newsletter { grid-column: 1 / -1; }
+  .footer-brand-row > *, .footer-links > section { min-width: 0; overflow-wrap: anywhere; }
+}
+@media (prefers-reduced-motion: reduce) {
+  /* Mantém a navegação confortável se futuramente houver rolagem suave. */
+  html { scroll-behavior: auto; }
+}
+
+/* Rodapé: tipografia confirmada nas propriedades do Figma (17px / 16px).
+   A altura de linha é menor que a fonte por definição do layout de referência. */
+.home-footer h2 {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #f5f1eb;
+  margin-bottom: 14px;
+}
+.social-buttons svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.social-buttons button:hover,
+.social-buttons button:focus-visible {
+  color: #fff;
+  border-color: #fff;
+}
+.home-footer .wallet-brands {
+  /* Uma única faixa contornada reúne os três nomes, como na referência. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px 8px;
+  list-style: none;
+  border: 1px solid var(--accent);
+  border-radius: 5px;
+  padding: 7px 8px;
+  margin: 0;
+  color: var(--accent);
+  font-size: 8px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.newsletter-field {
+  /* Mantém input e botão com a mesma altura, sem espaços externos extras. */
+  align-items: stretch;
+}
+.newsletter-field input, .newsletter-field .button { min-height: 40px; }
+.footer-benefits > section, .footer-links > section {
+  /* Permite quebra do conteúdo dentro da coluna, sem invadir a próxima. */
+  min-width: 0;
+}
+.wallet-brands li { margin: 0; }
+.wallet-brands li + li::before {
+  /* O separador é decorativo: não altera os nomes das carteiras. */
+  content: '·';
+  margin-right: 8px;
+}
+@media (max-width: 640px) {
+  .home-footer h2 { font-size: 14px; line-height: 20px; }
+  .home-footer .wallet-brands { justify-content: flex-start; }
+}
+
+/* Cores amostradas da referência enviada, restritas ao bloco social. */
+.footer-social .social-buttons button {
+  color: #d28a4c;
+  border-color: #d28a4c;
+  background-color: #241612;
+}
+.footer-social .social-buttons button:hover,
+.footer-social .social-buttons button:focus-visible {
+  color: #f5f1eb;
+  border-color: #f5f1eb;
+}
+.footer-social .wallet-brands {
+  background-color: #38220f;
+  border-color: #573320;
+  color: #f1a158;
+}
+
+/* Alinhamento local do bloco social: títulos, ícones e carteiras partem
+   da mesma borda esquerda, sem esticar a faixa até o fim da coluna. */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer-social > h2 { width: 100%; }
+.footer-social .social-buttons { margin: 0; padding: 0; }
+.footer-social .wallet-heading { margin: 24px 0 14px; }
+.footer-social .wallet-brands {
+  width: fit-content;
+  max-width: 100%;
+  justify-content: flex-start;
+  font-size: 10px;
+}
+/* Links e botões compartilham a mesma tipografia em todas as páginas. */
+.footer-links li > a { color: var(--muted); font-size: 11px; line-height: 1.7; }

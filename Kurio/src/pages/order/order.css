@@ -1,0 +1,29 @@
+.transaction-receipt { position: relative; width: min(630px, 100%); padding: 0; margin: 36px auto; border-bottom-width: 8px; }
+.receipt-close { position: absolute; right: 16px; top: 12px; color: var(--accent); font-size: 24px; }
+.receipt-heading { padding: 24px 32px; text-align: center; }
+.receipt-envelope { width: 80px; height: 90px; color: var(--accent); margin-bottom: 12px; }
+.receipt-heading > p { color: var(--muted); font-size: 16px; font-weight: 500; }
+.receipt-metadata { display: grid; grid-template-columns: 1.25fr 1fr 1fr 1fr; margin: 0; border-top: 1px solid #573320; border-bottom: 1px solid #573320; padding: 16px 32px; gap: 0; }
+.receipt-metadata > div { border-right: 1px solid #77503a; padding: 0 12px; min-width: 0; font-size: 12px; line-height: 1.5; color: var(--muted); }
+.receipt-metadata > div:first-child { padding-left: 0; }.receipt-metadata > div:last-child { border: 0; padding-right: 0; }
+.receipt-metadata dd { margin: 0; font-size: 11px; overflow-wrap: anywhere; }
+.receipt-body { padding: 28px 40px 56px; text-align: center; }
+.receipt-body > h2 { text-align: left; font-size: 16px; font-weight: 500; margin: 0 0 12px; }
+.receipt-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+.receipt-table th { padding: 0 0 12px; border-bottom: 1px solid #77503a; font-weight: 500; }
+.receipt-table td { padding: 12px 0; vertical-align: middle; }
+.receipt-table td:first-child { display: flex; gap: 12px; align-items: center; }
+.receipt-table img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+.receipt-table strong { font-size: 13px; font-weight: 500; }.receipt-table small { display: block; color: var(--muted); font-size: 10px; margin-top: 4px; }
+.receipt-table td:nth-child(2) { color: var(--muted); font-size: 12px; padding-inline: 8px; }
+.receipt-table td:last-child { color: var(--accent); text-align: right; font-weight: 500; white-space: nowrap; }
+.receipt-table th:last-child { text-align: right; }
+.receipt-body .financial-summary { padding-bottom: 16px; border-bottom: 1px solid #77503a; margin-bottom: 16px; }
+.receipt-body .receipt-network-message { margin: 16px 0 24px; font-size: 13px; line-height: 1.7; }
+.explorer-dialog { max-width: min(600px, 90vw); border: 1px solid #77503a; background: #261813; color: #f5f1eb; padding: 28px; border-radius: 8px; }.explorer-dialog p { overflow-wrap: anywhere; }.explorer-dialog::backdrop { background: #000b; }
+@media (max-width: 640px) {
+  .receipt-body { padding: 24px 16px 36px; }
+  .receipt-metadata { grid-template-columns: 1fr 1fr; padding: 16px; gap: 16px; }
+  .receipt-metadata > div { border: 0; padding: 0; }
+  .receipt-table img { width: 44px; height: 44px; }.receipt-table strong { font-size: 11px; }.receipt-table td:last-child { font-size: 11px; }.receipt-table td:nth-child(2) { font-size: 10px; }
+}

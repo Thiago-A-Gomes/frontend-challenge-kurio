@@ -1,0 +1,16 @@
+.collection-recommendations { margin-top: 96px; }
+.collection-recommendations > h2 {
+  margin: 0 0 32px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #483124;
+  color: var(--accent);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+.recommendation-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
+@media (max-width: 900px) { .recommendation-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .collection-recommendations { margin-top: 48px; }
+  .recommendation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}

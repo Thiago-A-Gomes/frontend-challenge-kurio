@@ -1,0 +1,338 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/console.spec.ts",
+      "--workers=1"
+    ],
+    "configFile": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\playwright.config.mjs",
+    "rootDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5192",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "channel": "chrome"
+          },
+          "browserName": "chromium",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5192",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "channel": "chrome"
+          },
+          "browserName": "chromium",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/tests/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5192 --strictPort",
+      "url": "http://127.0.0.1:5192",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "console.spec.ts",
+      "file": "console.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fluxo principal não registra erro React, exceção ou recurso estático quebrado",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 18303,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts:29:18",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                      "column": 18,
+                      "line": 29
+                    },
+                    "snippet": "  27 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n  28 |   await testInfo.attach('console-and-issues.json', { body: JSON.stringify({ errors, failedAssets, deprecated }, null, 2), contentType: 'application/json' });\n> 29 |   expect(errors).toEqual([]);\n     |                  ^\n  30 |   expect(failedAssets).toEqual([]);\n  31 |   expect(deprecated).toEqual([]);\n  32 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                        "column": 18,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  27 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n  28 |   await testInfo.attach('console-and-issues.json', { body: JSON.stringify({ errors, failedAssets, deprecated }, null, 2), contentType: 'application/json' });\n> 29 |   expect(errors).toEqual([]);\n     |                  ^\n  30 |   expect(failedAssets).toEqual([]);\n  31 |   expect(deprecated).toEqual([]);\n  32 | });\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts:29:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:46:49.648Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-issues.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbCiAgICAiRW5jb3VudGVyZWQgYSBzY3JpcHQgdGFnIHdoaWxlIHJlbmRlcmluZyBSZWFjdCBjb21wb25lbnQuIFNjcmlwdHMgaW5zaWRlIFJlYWN0IGNvbXBvbmVudHMgYXJlIG5ldmVyIGV4ZWN1dGVkIHdoZW4gcmVuZGVyaW5nIG9uIHRoZSBjbGllbnQuIENvbnNpZGVyIHVzaW5nIHRlbXBsYXRlIHRhZyBpbnN0ZWFkIChodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9IVE1ML0VsZW1lbnQvdGVtcGxhdGUpLiIsCiAgICAiRW5jb3VudGVyZWQgYSBzY3JpcHQgdGFnIHdoaWxlIHJlbmRlcmluZyBSZWFjdCBjb21wb25lbnQuIFNjcmlwdHMgaW5zaWRlIFJlYWN0IGNvbXBvbmVudHMgYXJlIG5ldmVyIGV4ZWN1dGVkIHdoZW4gcmVuZGVyaW5nIG9uIHRoZSBjbGllbnQuIENvbnNpZGVyIHVzaW5nIHRlbXBsYXRlIHRhZyBpbnN0ZWFkIChodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9IVE1ML0VsZW1lbnQvdGVtcGxhdGUpLiIKICBdLAogICJmYWlsZWRBc3NldHMiOiBbXSwKICAiZGVwcmVjYXRlZCI6IFtdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                    "column": 18,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ef58feb76c0befb42c6d-2faab122a7f50df70c95",
+          "file": "console.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "fluxo principal não registra erro React, exceção ou recurso estático quebrado",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10500,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts:29:18",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                      "column": 18,
+                      "line": 29
+                    },
+                    "snippet": "  27 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n  28 |   await testInfo.attach('console-and-issues.json', { body: JSON.stringify({ errors, failedAssets, deprecated }, null, 2), contentType: 'application/json' });\n> 29 |   expect(errors).toEqual([]);\n     |                  ^\n  30 |   expect(failedAssets).toEqual([]);\n  31 |   expect(deprecated).toEqual([]);\n  32 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                        "column": 18,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+   \"Encountered a script tag while rendering React component. Scripts inside React components are never executed when rendering on the client. Consider using template tag instead (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template).\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  27 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n  28 |   await testInfo.attach('console-and-issues.json', { body: JSON.stringify({ errors, failedAssets, deprecated }, null, 2), contentType: 'application/json' });\n> 29 |   expect(errors).toEqual([]);\n     |                  ^\n  30 |   expect(failedAssets).toEqual([]);\n  31 |   expect(deprecated).toEqual([]);\n  32 | });\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts:29:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:47:14.626Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "console-and-issues.json",
+                      "contentType": "application/json",
+                      "body": "ewogICJlcnJvcnMiOiBbCiAgICAiRW5jb3VudGVyZWQgYSBzY3JpcHQgdGFnIHdoaWxlIHJlbmRlcmluZyBSZWFjdCBjb21wb25lbnQuIFNjcmlwdHMgaW5zaWRlIFJlYWN0IGNvbXBvbmVudHMgYXJlIG5ldmVyIGV4ZWN1dGVkIHdoZW4gcmVuZGVyaW5nIG9uIHRoZSBjbGllbnQuIENvbnNpZGVyIHVzaW5nIHRlbXBsYXRlIHRhZyBpbnN0ZWFkIChodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9IVE1ML0VsZW1lbnQvdGVtcGxhdGUpLiIsCiAgICAiRW5jb3VudGVyZWQgYSBzY3JpcHQgdGFnIHdoaWxlIHJlbmRlcmluZyBSZWFjdCBjb21wb25lbnQuIFNjcmlwdHMgaW5zaWRlIFJlYWN0IGNvbXBvbmVudHMgYXJlIG5ldmVyIGV4ZWN1dGVkIHdoZW4gcmVuZGVyaW5nIG9uIHRoZSBjbGllbnQuIENvbnNpZGVyIHVzaW5nIHRlbXBsYXRlIHRhZyBpbnN0ZWFkIChodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9IVE1ML0VsZW1lbnQvdGVtcGxhdGUpLiIKICBdLAogICJmYWlsZWRBc3NldHMiOiBbXSwKICAiZGVwcmVjYXRlZCI6IFtdCn0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-mobile\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\console-fluxo-principal-nã-6043b-u-recurso-estático-quebrado-mobile\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\console.spec.ts",
+                    "column": 18,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ef58feb76c0befb42c6d-2d50f9ab38b5a07fa773",
+          "file": "console.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T21:46:48.583Z",
+    "duration": 39436.157999999996,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,36 @@
+/* Todas as imagens ficam sobrepostas na mesma área de 450 × 450 da referência. */
+.hero-carousel-images { position: relative; }
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 650ms ease, visibility 650ms;
+}
+.hero-slide.is-active { opacity: 1; visibility: visible; }
+.hero-slide img { display: block; object-position: center; }
+.hero .slide-indicators { align-items: center; gap: 4px; }
+.slide-dot {
+  /* A área clicável é maior que o ponto visível. */
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.slide-dot::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: .45;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+.slide-dot[aria-pressed="true"]::after { opacity: 1; transform: scale(1.2); }
+@media (prefers-reduced-motion: reduce) {
+  /* A troca manual permanece disponível, sem animação ou reprodução automática. */
+  .hero-slide, .slide-dot::after { transition: none; }
+}

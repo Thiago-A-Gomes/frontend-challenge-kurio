@@ -1,0 +1,127 @@
+/* Fonte variável local: atende aos pesos 400, 500 e 700 usados no Figma.
+   swap mantém o texto visível enquanto a fonte está carregando. */
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/RobotoMono-Latin.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  unicode-range: U+0000-024F, U+2000-2BFF;
+}
+@font-face {
+  font-family: 'Roboto Mono';
+  src: url('/fonts/RobotoMono-Variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  unicode-range: U+0250-1FFF, U+2C00-10FFFF;
+}
+/* Base: cores e medidas compartilhadas. */
+:root{font-family:"Roboto Mono",monospace;color:#f5f0e9;background:#140d0a;font-synthesis:none;--accent:#d58e49;--muted:#ddbc8e}
+*{box-sizing:border-box}body{margin:0}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible{outline:2px solid #f4c791;outline-offset:5px}button:hover,.button:hover{filter:brightness(1.12)}
+.page{width:min(1200px,calc(100% - 64px));margin:24px auto}.header{display:flex;align-items:center;justify-content:space-between;gap:32px;border-bottom:1px solid #483124;min-height:46px}.logo{font-weight:700;letter-spacing:2px;font-size:14px}nav{display:flex;align-self:stretch;gap:40px}.nav-link{display:flex;align-items:center;background:none;border:0;border-bottom:2px solid transparent;padding:8px 0 17px;color:inherit;font-size:16px;letter-spacing:.5px}.nav-link.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:bold}.header-actions{display:flex;align-items:center;gap:24px;padding-bottom:8px}.icon-button{background:none;color:inherit;border:0;padding:4px;display:grid;place-items:center}.icon-button svg{width:24px;height:24px}.button{border:0;border-radius:6px;background:var(--accent);color:#140d0a;font-weight:700;padding:11px 26px}.login{font-size:16px;padding:8px 12px;white-space:nowrap}.login span{font-size:22px;line-height:16px}
+/* Duas colunas: o texto se adapta e a imagem mantém suas proporções. */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,450px);gap:64px;margin-top:32px;align-items:stretch}.hero-copy{padding:32px 0 28px 40px;display:flex;flex-direction:column;align-items:flex-start}.eyebrow{font-size:14px;letter-spacing:1.5px;margin:8px 0 18px}h1{font-size:clamp(28px,3.2vw,44px);line-height:1.55;text-transform:uppercase;margin:0 0 8px;letter-spacing:-1px}.description{max-width:560px;color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 30px}.explore{text-transform:uppercase;font-size:15px}.slide-indicators{display:flex;gap:8px;align-self:flex-end;margin-top:auto;padding-top:40px;padding-right:32px}.slide-indicators span{width:8px;height:8px;border-radius:50%;background:var(--accent)}.slide-indicators span:not(:first-child){opacity:.6}.hero-art{aspect-ratio:1;overflow:hidden;border-radius:24px;background:#d5d3ae}.hero-art img{width:100%;height:100%;object-fit:cover}.image-placeholder{height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;color:#233b30;background:radial-gradient(ellipse at top,#f2edce,transparent 65%),linear-gradient(135deg,#aeb69c,#ded9b8)}.art-mark{font-size:130px;font-weight:700;line-height:1;border:2px solid #233b30;border-radius:50%;width:180px;height:180px;display:grid;place-items:center}.image-placeholder p{font-weight:bold;font-size:20px;margin:28px 0 12px}.image-placeholder small{max-width:230px;line-height:1.6}.status{color:var(--muted);font-size:13px;line-height:1.6;min-height:24px;margin:24px 0}.skip-link{position:absolute;left:16px;top:-100px;background:var(--accent);color:#140d0a;padding:12px;z-index:2}.skip-link:focus{top:8px}[hidden]{display:none!important}
+/* Telas menores: reorganizamos os elementos sem largura fixa. */
+@media(min-width:1440px){.page{width:calc(100% - 240px);max-width:1200px}}
+@media(max-width:1000px){.header{flex-wrap:wrap;gap:16px}.header nav{order:3;width:100%;justify-content:center;gap:32px}.hero{gap:32px;grid-template-columns:1.2fr 1fr;align-items:center}.hero-copy{padding:16px 0}h1{font-size:30px;line-height:1.4}.description{font-size:13px}.slide-indicators{padding-top:24px}}
+@media(max-width:640px){.page{width:calc(100% - 40px);margin:20px auto}.header-actions{gap:14px}.header nav{justify-content:space-between;gap:12px}.nav-link{font-size:13px;padding-bottom:12px}.hero{grid-template-columns:1fr;gap:28px;margin-top:24px}.hero-copy{padding:0}h1{font-size:clamp(26px,7vw,38px);line-height:1.4}.eyebrow{font-size:12px}.description{font-size:14px}.hero-art{width:100%;max-width:450px;justify-self:center}.slide-indicators{align-self:center;padding-right:0}.login{font-size:14px}}
+
+
+
+/* AJUSTE DE TIPOGRAFIA E BOTÕES
+   Roboto Mono foi confirmada no Figma e está incluída localmente.
+   Os controles herdam a fonte para evitar a fonte padrão do navegador. */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.button {
+  /* inline-flex centraliza o conteúdo e funciona em button e link (Explorar). */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  line-height: 1;
+  text-align: center;
+}
+
+.icon-button {
+  /* A área clicável fica centralizada mesmo quando o ícone é menor. */
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.login span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Valores conferidos nas propriedades dos textos no Figma.
+   A variável font/family foi identificada como Roboto Mono. */
+:root {
+  color: #f5f1eb;
+  --muted: #cfb28c;
+}
+
+.eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  /* 10% de 14px corresponde a 1.4px de espaço entre letras. */
+  letter-spacing: 0.1em;
+  color: #f5f1eb;
+}
+
+.description {
+  width: 100%;
+  /* Limita a largura sem forçar 557px em telas menores. */
+  max-width: 557px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #cfb28c;
+}
+
+
+/* Botões laranja ficam brancos no mouse e no foco por teclado.
+   O texto escuro mantém o contraste com as duas cores de fundo. */
+.button {
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.button:hover,
+.button:focus-visible {
+  background-color: #fff;
+  color: #140d0a;
+  /* Remove o brilho genérico anterior para preservar o branco definido. */
+  filter: none;
+}
+
+/* Respeita a preferência do sistema por menos animação. */
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+}
+
+/* O feedback vazio não ocupa espaço entre a página e o rodapé compartilhado. */
+.status:empty { display: none; }
+
+/* Autofill do navegador preserva a paleta escura sem desativar o gerenciador de senhas. */
+input { color-scheme: dark; caret-color: #f5f1eb; }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f5f1eb;
+  caret-color: #f5f1eb;
+  -webkit-box-shadow: 0 0 0 1000px #211510 inset;
+  box-shadow: 0 0 0 1000px #211510 inset;
+  border-color: #77503a;
+}
+input:autofill { background: #211510; color: #f5f1eb; }
+input:-webkit-autofill:focus { border-color: var(--accent); }

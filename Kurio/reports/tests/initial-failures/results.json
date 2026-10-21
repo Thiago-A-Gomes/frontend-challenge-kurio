@@ -1,0 +1,856 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/e2e/acceptance.spec.ts",
+      "--workers=1"
+    ],
+    "configFile": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\playwright.config.mjs",
+    "rootDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/thigo/Documents/Codex/2026-10-21/vo/outputs/kurio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5192",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "channel": "chrome"
+          },
+          "browserName": "chromium",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5192",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "launchOptions": {
+            "channel": "chrome"
+          },
+          "browserName": "chromium",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/tests/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev -- --port 5192 --strictPort",
+      "url": "http://127.0.0.1:5192",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "filtros combinados, ordenação e histórico restauram controles e resultados",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2441,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:39:18",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                      "column": 18,
+                      "line": 39
+                    },
+                    "snippet": "  37 |   const firstPage = await page.locator('.nft-grid .nft-card').allTextContents();\n  38 |   const prices = firstPage.map((text) => Number(text.match(/(\\d+\\.\\d+) ETH/)![1]));\n> 39 |   expect(prices).toEqual([...prices].sort((a, b) => a - b));\n     |                  ^\n  40 |   await page.getByRole('button', { name: 'Página 2', exact: true }).click();\n  41 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(3);\n  42 |   const secondUrl = page.url();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 18,
+                        "line": 39
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  37 |   const firstPage = await page.locator('.nft-grid .nft-card').allTextContents();\n  38 |   const prices = firstPage.map((text) => Number(text.match(/(\\d+\\.\\d+) ETH/)![1]));\n> 39 |   expect(prices).toEqual([...prices].sort((a, b) => a - b));\n     |                  ^\n  40 |   await page.getByRole('button', { name: 'Página 2', exact: true }).click();\n  41 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(3);\n  42 |   const secondUrl = page.url();\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:39:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:32:22.477Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                    "column": 18,
+                    "line": 39
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f388907e0d9ca3d211e8",
+          "file": "acceptance.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "carregamento lento mostra skeleton e erro REST permite nova tentativa",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9595,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:64:41",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                      "column": 41,
+                      "line": 64
+                    },
+                    "snippet": "  62 |   await page.evaluate(() => localStorage.setItem('kurio.scenario', 'server-error'));\n  63 |   await page.reload();\n> 64 |   await expect(page.getByRole('alert')).toContainText('Serviço temporariamente indisponível');\n     |                                         ^\n  65 |   await page.evaluate(() => localStorage.removeItem('kurio.scenario'));\n  66 |   await page.getByRole('button', { name: 'Tentar novamente', exact: true }).click();\n  67 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(9);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 41,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\n\n  62 |   await page.evaluate(() => localStorage.setItem('kurio.scenario', 'server-error'));\n  63 |   await page.reload();\n> 64 |   await expect(page.getByRole('alert')).toContainText('Serviço temporariamente indisponível');\n     |                                         ^\n  65 |   await page.evaluate(() => localStorage.removeItem('kurio.scenario'));\n  66 |   await page.getByRole('button', { name: 'Tentar novamente', exact: true }).click();\n  67 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(9);\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:64:41"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:32:37.054Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                    "column": 41,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f1611512d29681c535ca",
+          "file": "acceptance.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "avatar e senha validam erros, persistem e autenticam com a nova senha",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:03.353Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-b53cc5d02c1caf8e9b58",
+          "file": "acceptance.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "edição de carteira rejeita endereço inválido e persiste correção",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5472,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:17.882Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-03374739ebe82c6dbef5",
+          "file": "acceptance.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "preço e disponibilidade via Socket.IO invalidam revisão no checkout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7626,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:23.371Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-7870bcd4f4b07c34c508",
+          "file": "acceptance.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "pedido pendente retoma após desconexão e clique repetido cria uma tentativa",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7217,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:31.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-a59232356b93ec822fba",
+          "file": "acceptance.spec.ts",
+          "line": 129,
+          "column": 1
+        },
+        {
+          "title": "teclado mantém foco no diálogo e valida formulário de login",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5250,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:155:90",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                      "column": 90,
+                      "line": 155
+                    },
+                    "snippet": "  153 |   for (let index = 0; index < 16; index++) {\n  154 |     await page.keyboard.press('Tab');\n> 155 |     expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);\n      |                                                                                          ^\n  156 |   }\n  157 |   await dialog.getByLabel('E-mail', { exact: true }).fill('email-invalido');\n  158 |   await dialog.getByLabel('Senha', { exact: true }).fill('Kurio123!');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 90,
+                        "line": 155
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  153 |   for (let index = 0; index < 16; index++) {\n  154 |     await page.keyboard.press('Tab');\n> 155 |     expect(await dialog.evaluate((element) => element.contains(document.activeElement))).toBe(true);\n      |                                                                                          ^\n  156 |   }\n  157 |   await dialog.getByLabel('E-mail', { exact: true }).fill('email-invalido');\n  158 |   await dialog.getByLabel('Senha', { exact: true }).fill('Kurio123!');\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:155:90"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:38.250Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-teclado-mantém--1f0ac--valida-formulário-de-login-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-teclado-mantém--1f0ac--valida-formulário-de-login-desktop\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-teclado-mantém--1f0ac--valida-formulário-de-login-desktop\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                    "column": 90,
+                    "line": 155
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-4b02bb47bd9136adde7a",
+          "file": "acceptance.spec.ts",
+          "line": 147,
+          "column": 1
+        },
+        {
+          "title": "filtros combinados, ordenação e histórico restauram controles e resultados",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1812,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:39:18",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                      "column": 18,
+                      "line": 39
+                    },
+                    "snippet": "  37 |   const firstPage = await page.locator('.nft-grid .nft-card').allTextContents();\n  38 |   const prices = firstPage.map((text) => Number(text.match(/(\\d+\\.\\d+) ETH/)![1]));\n> 39 |   expect(prices).toEqual([...prices].sort((a, b) => a - b));\n     |                  ^\n  40 |   await page.getByRole('button', { name: 'Página 2', exact: true }).click();\n  41 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(3);\n  42 |   const secondUrl = page.url();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 18,
+                        "line": 39
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 6\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[31m+   421.19,\u001b[39m\n\u001b[2m    91.69,\u001b[22m\n\u001b[32m-   421.19,\u001b[39m\n\u001b[32m-   710.59,\u001b[39m\n\u001b[32m-   881.79,\u001b[39m\n\u001b[31m+   5521.99,\u001b[39m\n\u001b[2m    1181.29,\u001b[22m\n\u001b[32m-   1600.39,\u001b[39m\n\u001b[31m+   3141.39,\u001b[39m\n\u001b[31m+   881.79,\u001b[39m\n\u001b[2m    2070.99,\u001b[22m\n\u001b[32m-   3141.39,\u001b[39m\n\u001b[32m-   5521.99,\u001b[39m\n\u001b[31m+   710.59,\u001b[39m\n\u001b[31m+   1600.39,\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  37 |   const firstPage = await page.locator('.nft-grid .nft-card').allTextContents();\n  38 |   const prices = firstPage.map((text) => Number(text.match(/(\\d+\\.\\d+) ETH/)![1]));\n> 39 |   expect(prices).toEqual([...prices].sort((a, b) => a - b));\n     |                  ^\n  40 |   await page.getByRole('button', { name: 'Página 2', exact: true }).click();\n  41 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(3);\n  42 |   const secondUrl = page.url();\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:39:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:46.579Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-mobile\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-filtros-combina-d48d6-uram-controles-e-resultados-mobile\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                    "column": 18,
+                    "line": 39
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-b2ead419e1933968b44e",
+          "file": "acceptance.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "carregamento lento mostra skeleton e erro REST permite nova tentativa",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8805,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:64:41",
+                    "location": {
+                      "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                      "column": 41,
+                      "line": 64
+                    },
+                    "snippet": "  62 |   await page.evaluate(() => localStorage.setItem('kurio.scenario', 'server-error'));\n  63 |   await page.reload();\n> 64 |   await expect(page.getByRole('alert')).toContainText('Serviço temporariamente indisponível');\n     |                                         ^\n  65 |   await page.evaluate(() => localStorage.removeItem('kurio.scenario'));\n  66 |   await page.getByRole('button', { name: 'Tentar novamente', exact: true }).click();\n  67 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(9);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                        "column": 41,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert')\nExpected substring: \u001b[32m\"Serviço temporariamente indisponível\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('alert') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert')\u001b[22m\n\n\n  62 |   await page.evaluate(() => localStorage.setItem('kurio.scenario', 'server-error'));\n  63 |   await page.reload();\n> 64 |   await expect(page.getByRole('alert')).toContainText('Serviço temporariamente indisponível');\n     |                                         ^\n  65 |   await page.evaluate(() => localStorage.removeItem('kurio.scenario'));\n  66 |   await page.getByRole('button', { name: 'Tentar novamente', exact: true }).click();\n  67 |   await expect(page.locator('.nft-grid .nft-card')).toHaveCount(9);\n    at C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts:64:41"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:33:57.288Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-mobile\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\test-results\\acceptance-carregamento-le-83eca-REST-permite-nova-tentativa-mobile\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\thigo\\Documents\\Codex\\2026-10-21\\vo\\outputs\\kurio\\tests\\e2e\\acceptance.spec.ts",
+                    "column": 41,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-ab1f60300d670c021ea5",
+          "file": "acceptance.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "avatar e senha validam erros, persistem e autenticam com a nova senha",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8823,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:34:13.521Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-f0f4ad75ef3bd359b638",
+          "file": "acceptance.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "edição de carteira rejeita endereço inválido e persiste correção",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5020,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:34:22.676Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-9724fb546d262e7647db",
+          "file": "acceptance.spec.ts",
+          "line": 99,
+          "column": 1
+        },
+        {
+          "title": "preço e disponibilidade via Socket.IO invalidam revisão no checkout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:34:27.715Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-370e6ad9df25570518e6",
+          "file": "acceptance.spec.ts",
+          "line": 114,
+          "column": 1
+        },
+        {
+          "title": "pedido pendente retoma após desconexão e clique repetido cria uma tentativa",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8242,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:34:35.074Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-6db5336f342b966217c5",
+          "file": "acceptance.spec.ts",
+          "line": 129,
+          "column": 1
+        },
+        {
+          "title": "teclado mantém foco no diálogo e valida formulário de login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1582,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-21T21:34:43.332Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6bf654160f377cf56a60-69bfd149c2aec009f1c5",
+          "file": "acceptance.spec.ts",
+          "line": 147,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-21T21:32:21.689Z",
+    "duration": 144844.856,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

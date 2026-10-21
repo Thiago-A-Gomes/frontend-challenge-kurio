@@ -1,0 +1,16 @@
+Imagens dos cards da seção Marketplace.
+
+Salve os arquivos PNG nesta pasta usando estes nomes (ordem alfabética):
+cosmic-bloom-118.png
+emerald-ape-042.png (já incluído como cópia da imagem do destaque)
+golden-beat-207.png
+golden-signal-160.png
+ivory-baron-088.png
+neon-vessel-552.png
+nft-a-confirmar.png (nome provisório: confirmar no Figma)
+sage-nomad-009.png
+violet-nomad-314.png
+
+A imagem da primeira seção continua em public/images/personagem.png.
+Os caminhos dos cards ficam em src/mocks/fixtures/catalog.ts.
+Depois de adicionar as imagens, atualize o navegador.
