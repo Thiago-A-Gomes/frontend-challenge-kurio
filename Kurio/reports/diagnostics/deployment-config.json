@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-22T01:40:54.214Z",
+  "node": "22.23.4",
+  "npm": "12.2.1",
+  "engine": "^22.19.0",
+  "install": {
+    "command": "node scripts/vercel-command.mjs install",
+    "clean": true,
+    "exitCode": 0,
+    "packages": 435
+  },
+  "build": {
+    "command": "node scripts/vercel-command.mjs build",
+    "exitCode": 0,
+    "assetHashesMatchPreviousAuditedBuild": true,
+    "matchedAssetCount": 19
+  },
+  "legacyCacheEnvironmentInjected": true,
+  "cacheAndApprovalWarningsObserved": false,
+  "remainingWarnings": [
+    "@opentelemetry/sdk-trace-base@2.12.0: upstream Lighthouse dependency"
+  ],
+  "fullDependencyAudit": {
+    "moderate": 2,
+    "high": 6
+  },
+  "newConfigurationVerifiedOnVercel": false
+}

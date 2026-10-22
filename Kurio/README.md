@@ -33,7 +33,7 @@ REST passa pelos handlers MSW e os eventos passam pelo cliente Socket.IO. A inte
 
 ## Executar localmente
 
-Requer **Node.js 22.19 ou superior** e npm. Use `localhost`, `127.0.0.1` ou HTTPS para registrar o Service Worker.
+Requer **Node.js 22.19 ou mais recente da linha 22** e npm. Use `localhost`, `127.0.0.1` ou HTTPS para registrar o Service Worker.
 
 ```sh
 git clone https://github.com/Thiago-A-Gomes/frontend-challenge-kurio.git
@@ -179,7 +179,9 @@ Comentários em português e inglês explicam responsabilidades e decisões. O l
 
 ## Publicação na Vercel
 
-Configure **Root Directory: `Kurio`**, **Build Command: `npm run build`** e **Output Directory: `dist`**. [vercel.json](vercel.json) configura fallback das rotas e cabeçalhos de segurança. Confirme os cabeçalhos e os fluxos no domínio publicado após o deploy.
+Configure **Root Directory: `Kurio`** e **Output Directory: `dist`**. Use os comandos de instalação/build definidos em [vercel.json](vercel.json), que também configura fallback das rotas e cabeçalhos de segurança. Confirme os cabeçalhos e os fluxos no domínio publicado após o deploy.
+
+O arquivo também define comandos de instalação/build que traduzem a variável legada `npm_config_cache_dir` para `npm_config_cache`. A linha principal do Node fica limitada à 22. O campo `allowScripts` do package.json aprova somente as versões instaladas de esbuild, MSW e Sharp, exigidas pelos respectivos scripts de instalação; não há autorização global de scripts de dependências.
 
 ## Limites
 

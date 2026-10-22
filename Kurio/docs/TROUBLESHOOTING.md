@@ -80,6 +80,16 @@ EN: Audit the optimized preview on port 5191 using the four required categories.
 
 ## Reset deliberado / Deliberate reset
 
+### Avisos de instalação na Vercel / Vercel installation warnings
+
+PT: `engines.node` usa `^22.19.0`, limitado à linha principal 22. Os scripts de instalação aprovados constam de `allowScripts`, por pacote e versão: esbuild 0.25.12, MSW 2.10.5 e Sharp 0.33.5. Ao atualizar um desses pacotes, revise o novo script antes de atualizar sua aprovação; não habilite todos os scripts globalmente.
+
+EN: Node is constrained to major 22. Installation approvals are pinned to the reviewed esbuild, MSW and Sharp versions. Review changed installation scripts before renewing approvals; never allow every dependency script globally.
+
+PT: O aviso `Unknown env config cache-dir` indica a variável legada `npm_config_cache_dir`. O runner `scripts/vercel-command.mjs` a traduz para `npm_config_cache` antes de chamar npm, preservando uma configuração válida já existente. O runner não filtra logs nem muda o nível dos avisos. Se o aviso aparecer antes de executar nossos comandos, sua origem é a preparação da plataforma; remova a variável legada em Settings → Environment Variables se ela estiver cadastrada no projeto.
+
+EN: The deployment runner translates legacy cache-dir configuration into npm's supported cache setting, retaining any explicit valid setting. It does not filter logs. Warnings emitted before the project commands originate in platform preparation; remove a project-level legacy variable if configured.
+
 PT: Se aparecer “This library called use() to suspend”, mantenha React.lazy nas rotas secundárias. Não substitua por lazyRouteComponent sem testar o ciclo de suspensão no React 19. Se a galeria mobile voltar a exibir miniaturas na lateral, confira a ordem das importações em main.tsx: estilos das páginas antes de mobile.css. Os testes visuais devem passar sem regenerar as baselines.
 
 EN: For “This library called use() to suspend”, retain React.lazy on secondary routes and test React 19 suspension before replacing it. If mobile thumbnails move beside the image, check main.tsx style order: page styles must precede mobile.css. Visual tests should pass without regenerating baselines.
