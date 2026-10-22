@@ -3,12 +3,10 @@
  * EN: Presents visual calls to action and explicit destinations without simulating real launches.
  */
 import { Link } from '@tanstack/react-router';
-import type { PendingFeatureHandler } from '../../../shared/types/feedback';
-
-type Props = { onPendingFeature: PendingFeatureHandler };
+import { defaultCatalogSearch } from '../../../features/catalog/search';
 
 // Banners são conteúdo de apresentação; não simulam uma compra ou lançamento.
-export function PromotionalBanners({ onPendingFeature }: Props) {
+export function PromotionalBanners() {
   return (
     <section className="promotional-banners" aria-label="Descubra coleções">
       <article className="promotion">
@@ -17,7 +15,7 @@ export function PromotionalBanners({ onPendingFeature }: Props) {
         <div className="promotion-copy">
           <h2>Lançamentos gênesis<br />de edição limitada</h2>
           <p>Colecione edições escassas diretamente dos criadores antes da revelação pública.</p>
-          <button className="button" type="button" onClick={() => onPendingFeature('Lançamentos gênesis')}>Explorar <span aria-hidden="true">→</span></button>
+          <Link className="button" to="/" search={{ ...defaultCatalogSearch, category: 'new' }} hash="mercado" aria-label="Explorar novos lançamentos">Explorar <span aria-hidden="true">→</span></Link>
         </div>
       </article>
       <article className="promotion">
@@ -26,7 +24,7 @@ export function PromotionalBanners({ onPendingFeature }: Props) {
           <h2>Arte digital selecionada<br />e muito mais</h2>
           <p>Explore novos artistas, coleções verificadas e obras digitais que definem o agora.</p>
           {/* Link real para o catálogo existente na mesma página. */}
-          <Link className="button" to="/" hash="mercado">Explorar <span aria-hidden="true">→</span></Link>
+          <Link className="button" to="/" search={{ ...defaultCatalogSearch, collection: 'arte-digital' }} hash="mercado" aria-label="Explorar arte digital">Explorar <span aria-hidden="true">→</span></Link>
         </div>
       </article>
     </section>

@@ -43,7 +43,11 @@ Each module has a PT/EN comment. Comments explain responsibilities and boundarie
 | `src/pages/checkout/CheckoutPage.tsx` | Revisa dados e revalida a cotação antes de enviar uma tentativa idempotente. | Reviews collector data and revalidates the quote before sending an idempotent attempt. |
 | `src/pages/ComingSoonPage.tsx` | Informa conteúdo ainda não disponível e anima apenas o fundo decorativo. | Explains unavailable content and animates only the decorative background. |
 | `src/pages/home/components/Hero.tsx` | Alterna artes a cada três segundos, com cleanup do timer e respeito a movimento reduzido. | Cycles artwork every three seconds, cleaning up timers and respecting reduced motion. |
-| `src/pages/home/components/MintJournal.tsx` | Apresenta prévias editoriais; a entrega não inclui um sistema de publicação. | Presents editorial previews; the deliverable does not include a publishing system. |
+| `src/pages/home/components/MintJournal.tsx` | Abre os quatro guias locais e baixa o diálogo sob demanda. | Opens four local guides and downloads the dialog on demand. |
+| `src/features/editorial/ArticleDialog.tsx` | Controla leitura, foco, Tab, Escape e retorno ao botão do artigo. | Manages reading, focus, Tab, Escape and return to the article trigger. |
+| `src/features/editorial/article-content.ts` | Conteúdo educativo local carregado sob demanda; perfis de artistas são fictícios. | On-demand local educational content; artist profiles are fictional. |
+| `src/features/newsletter/NewsletterForm.tsx` | Valida o e-mail e usa mutação Axios/MSW; falhas não exibem confirmação. | Validates email and uses an Axios/MSW mutation; failures never show confirmation. |
+| `src/styles/motion.css` | Feedback curto de interação que respeita movimento reduzido. | Brief interaction feedback respecting reduced motion. |
 | `src/pages/home/components/PromotionalBanners.tsx` | Apresenta chamadas visuais e destinos explícitos, sem simular lançamentos reais. | Presents visual calls to action and explicit destinations without simulating real launches. |
 | `src/pages/home/HomePage.tsx` | Consulta o catálogo e compõe o início preservando filtros e paginação. | Loads the catalog and composes home while preserving filters and pagination. |
 | `src/pages/nft-details/NftDetailsPage.tsx` | Compõe galeria, compra, informações e recomendações a partir do contrato REST. | Composes gallery, purchase controls, information and recommendations from the REST contract. |
@@ -65,7 +69,7 @@ Each module has a PT/EN comment. Comments explain responsibilities and boundarie
 | `src/widgets/layout/AccountIcon.tsx` | Desenha ícones locais sem carregar scripts ou imagens externas. | Draws local icons without loading external scripts or images. |
 | `src/widgets/layout/AccountLayout.tsx` | Organiza a navegação da conta e efetua logout com limpeza dos dados privados. | Organizes account navigation and logs out while clearing private data. |
 | `src/widgets/layout/AppLayout.tsx` | Compõe cabeçalho e rodapé comuns; páginas escolhem seu próprio conteúdo. | Composes shared header and footer; pages provide their own content. |
-| `src/widgets/layout/footer/SiteFooter.tsx` | Renderiza links, benefícios e newsletter sem aparentar sucesso de ações fora do escopo. | Renders links, benefits and newsletter without pretending out-of-scope actions succeeded. |
+| `src/widgets/layout/footer/SiteFooter.tsx` | Compõe os links e o formulário de inscrição demonstrativa. | Composes links and the demo registration form. |
 | `src/widgets/layout/Header.tsx` | Mantém links e item ativo consistentes, com menu acessível em telas pequenas. | Keeps links and active navigation consistent, with an accessible small-screen menu. |
 | `src/widgets/layout/MobileNavigation.tsx` | Oferece acesso rápido ao início, conta e carrinho no layout mobile. | Provides quick access to home, account and cart in the mobile layout. |
 | `src/widgets/layout/navigation.ts` | Calcula um único item ativo a partir da rota e da âncora. | Computes a single active item from the route and anchor. |

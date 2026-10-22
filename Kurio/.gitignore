@@ -1,8 +1,14 @@
 node_modules/
 dist/
 test-results/
+test-results-*/
 playwright-report/
 .env
 .env.*
 !.env.example
 *.log
+# PT: Auditorias avulsas são entregues no ZIP versionado. EN: Raw audits ship in the versioned ZIP.
+/reports/lighthouse/*-mobile-*.html
+/reports/lighthouse/*-mobile-*.json
+/reports/lighthouse/*-desktop-*.html
+/reports/lighthouse/*-desktop-*.json

@@ -1,8 +1,8 @@
 {
   "stats": {
-    "startTime": "2026-10-22T01:14:58.295Z",
-    "duration": 332487.228,
-    "expected": 64,
+    "startTime": "2026-10-22T01:57:22.414Z",
+    "duration": 360482.108,
+    "expected": 74,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
@@ -23,7 +23,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1856,
+      "durationMs": 2104,
       "attachments": []
     },
     {
@@ -33,7 +33,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5120,
+      "durationMs": 20452,
       "attachments": []
     },
     {
@@ -43,7 +43,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6122,
+      "durationMs": 6640,
       "attachments": []
     },
     {
@@ -53,7 +53,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5049,
+      "durationMs": 5168,
       "attachments": []
     },
     {
@@ -63,7 +63,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7952,
+      "durationMs": 8087,
       "attachments": []
     },
     {
@@ -73,7 +73,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 9912,
+      "durationMs": 9519,
       "attachments": []
     },
     {
@@ -83,7 +83,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1224,
+      "durationMs": 1134,
       "attachments": []
     },
     {
@@ -93,7 +93,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1993,
+      "durationMs": 1912,
       "attachments": []
     },
     {
@@ -103,7 +103,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7103,
+      "durationMs": 5196,
       "attachments": []
     },
     {
@@ -113,7 +113,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5975,
+      "durationMs": 5954,
       "attachments": []
     },
     {
@@ -123,7 +123,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 4741,
+      "durationMs": 4575,
       "attachments": []
     },
     {
@@ -133,7 +133,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7912,
+      "durationMs": 8473,
       "attachments": []
     },
     {
@@ -143,7 +143,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 8680,
+      "durationMs": 8339,
       "attachments": []
     },
     {
@@ -153,7 +153,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1105,
+      "durationMs": 1139,
       "attachments": []
     },
     {
@@ -163,7 +163,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 11801,
+      "durationMs": 11908,
       "attachments": [
         {
           "name": "console-and-issues.json"
@@ -177,7 +177,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 11930,
+      "durationMs": 11792,
       "attachments": [
         {
           "name": "console-and-issues.json"
@@ -191,7 +191,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1365,
+      "durationMs": 1522,
       "attachments": []
     },
     {
@@ -201,7 +201,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 10967,
+      "durationMs": 10878,
       "attachments": []
     },
     {
@@ -211,7 +211,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6371,
+      "durationMs": 6317,
       "attachments": []
     },
     {
@@ -221,7 +221,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1736,
+      "durationMs": 2162,
       "attachments": []
     },
     {
@@ -231,7 +231,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 4752,
+      "durationMs": 5149,
       "attachments": []
     },
     {
@@ -241,7 +241,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1560,
+      "durationMs": 1313,
       "attachments": []
     },
     {
@@ -251,7 +251,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 11063,
+      "durationMs": 10916,
       "attachments": []
     },
     {
@@ -261,7 +261,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6323,
+      "durationMs": 6207,
       "attachments": []
     },
     {
@@ -271,7 +271,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1658,
+      "durationMs": 1729,
       "attachments": []
     },
     {
@@ -281,7 +281,107 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 4758,
+      "durationMs": 4791,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "banners abrem filtros distintos e removem filtros anteriores",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1044,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "paginação troca os itens sem salto e cada card abre seu próprio detalhe",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1201,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "quatro artigos abrem conteúdos distintos e devolvem o foco por Escape",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1550,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "newsletter valida e persiste inscrição idempotente após atualização",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1702,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "newsletter rejeita payload inválido e permite nova tentativa após falha REST",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1528,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "banners abrem filtros distintos e removem filtros anteriores",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 993,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "paginação troca os itens sem salto e cada card abre seu próprio detalhe",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1065,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "quatro artigos abrem conteúdos distintos e devolvem o foco por Escape",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1499,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "newsletter valida e persiste inscrição idempotente após atualização",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1429,
+      "attachments": []
+    },
+    {
+      "file": "home-actions.spec.ts",
+      "title": "newsletter rejeita payload inválido e permite nova tentativa após falha REST",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1703,
       "attachments": []
     },
     {
@@ -291,7 +391,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5707,
+      "durationMs": 5945,
       "attachments": []
     },
     {
@@ -301,7 +401,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 3710,
+      "durationMs": 3810,
       "attachments": []
     },
     {
@@ -311,7 +411,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 2842,
+      "durationMs": 3278,
       "attachments": []
     },
     {
@@ -321,7 +421,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7246,
+      "durationMs": 7704,
       "attachments": []
     },
     {
@@ -331,7 +431,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7307,
+      "durationMs": 7233,
       "attachments": []
     },
     {
@@ -341,7 +441,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 2609,
+      "durationMs": 3419,
       "attachments": []
     },
     {
@@ -351,7 +451,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 833,
+      "durationMs": 899,
       "attachments": []
     },
     {
@@ -361,7 +461,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 16943,
+      "durationMs": 17107,
       "attachments": []
     },
     {
@@ -371,7 +471,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5990,
+      "durationMs": 6018,
       "attachments": []
     },
     {
@@ -381,7 +481,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5657,
+      "durationMs": 5211,
       "attachments": []
     },
     {
@@ -391,7 +491,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 3575,
+      "durationMs": 3614,
       "attachments": []
     },
     {
@@ -401,7 +501,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 3281,
+      "durationMs": 3234,
       "attachments": []
     },
     {
@@ -411,7 +511,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7700,
+      "durationMs": 7599,
       "attachments": []
     },
     {
@@ -421,7 +521,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6790,
+      "durationMs": 6932,
       "attachments": []
     },
     {
@@ -431,7 +531,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 3053,
+      "durationMs": 2499,
       "attachments": []
     },
     {
@@ -441,7 +541,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 748,
+      "durationMs": 709,
       "attachments": []
     },
     {
@@ -451,7 +551,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 16985,
+      "durationMs": 16359,
       "attachments": []
     },
     {
@@ -461,7 +561,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 5982,
+      "durationMs": 5871,
       "attachments": []
     },
     {
@@ -471,7 +571,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7440,
+      "durationMs": 7332,
       "attachments": []
     },
     {
@@ -481,7 +581,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1614,
+      "durationMs": 1569,
       "attachments": []
     },
     {
@@ -491,7 +591,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7297,
+      "durationMs": 7289,
       "attachments": []
     },
     {
@@ -501,7 +601,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1617,
+      "durationMs": 1620,
       "attachments": []
     },
     {
@@ -521,7 +621,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1506,
+      "durationMs": 1440,
       "attachments": []
     },
     {
@@ -531,7 +631,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 2635,
+      "durationMs": 2587,
       "attachments": []
     },
     {
@@ -541,7 +641,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6924,
+      "durationMs": 6753,
       "attachments": []
     },
     {
@@ -551,7 +651,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1392,
+      "durationMs": 1352,
       "attachments": []
     },
     {
@@ -561,7 +661,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 2593,
+      "durationMs": 2589,
       "attachments": []
     },
     {
@@ -571,7 +671,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1079,
+      "durationMs": 1082,
       "attachments": []
     },
     {
@@ -581,7 +681,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1088,
+      "durationMs": 1064,
       "attachments": []
     },
     {
@@ -591,7 +691,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1700,
+      "durationMs": 1747,
       "attachments": []
     },
     {
@@ -601,7 +701,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 2965,
+      "durationMs": 2983,
       "attachments": []
     },
     {
@@ -611,7 +711,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1046,
+      "durationMs": 1104,
       "attachments": []
     },
     {
@@ -621,7 +721,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1031,
+      "durationMs": 1078,
       "attachments": []
     },
     {
@@ -631,7 +731,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 1705,
+      "durationMs": 1707,
       "attachments": []
     },
     {
@@ -641,7 +741,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 3508,
+      "durationMs": 3377,
       "attachments": []
     },
     {
@@ -651,7 +751,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 7555,
+      "durationMs": 6916,
       "attachments": []
     },
     {
@@ -661,7 +761,7 @@
       "status": "expected",
       "result": "passed",
       "attempts": 1,
-      "durationMs": 6469,
+      "durationMs": 6280,
       "attachments": []
     }
   ]

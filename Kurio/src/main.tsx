@@ -19,6 +19,7 @@ import './pages/checkout/checkout.css';
 import './pages/order/order.css';
 import './pages/coming-soon.css';
 import './styles/mobile.css';
+import './styles/motion.css';
 
 // O HTML fornece uma única div; o React monta os componentes dentro dela.
 const rootElement = document.getElementById('root');

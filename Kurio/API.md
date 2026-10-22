@@ -13,6 +13,7 @@ Os tipos de transporte ficam em `src/shared/api/contracts.ts`.
 | GET /nfts/:id/related | Cinco relacionados na sequência da referência |
 | GET /recommendations | Cinco recomendações para o carrinho |
 | GET /nfts/:id/reviews | Avaliações fictícias determinísticas |
+| POST /newsletter/subscriptions | email → id, email normalizado, subscribedAt, alreadySubscribed, simulated=true |
 | POST /register | name, username, email, password → usuário público |
 | POST /login | email, password → usuário, token opaco, expiração |
 | GET /session | Usuário público ou null para visitante |
@@ -39,6 +40,10 @@ Os tipos de transporte ficam em `src/shared/api/contracts.ts`.
 Authorization Bearer transporta o token. X-Visitor-Id identifica o carrinho do
 visitante. Login mescla o carrinho do visitante sem ultrapassar o estoque.
 Dados de outros usuários não são retornados em endpoints privados.
+
+## Newsletter demonstrativa
+
+O POST valida formato e limite de 254 caracteres. O e-mail é normalizado para minúsculas; novas tentativas do mesmo endereço retornam o mesmo registro. Não há endpoint público que liste inscrições. O banco local preserva o cadastro após atualização e o reset da demonstração o remove. O cenário `newsletter-error` responde HTTP 503 sem cadastrar; uma nova tentativa pode ser feita no formulário. O limite da simulação é de 2.000 registros (HTTP 429). Nenhuma mensagem de e-mail é enviada.
 
 ## Cotação e pedido
 

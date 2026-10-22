@@ -1,0 +1,12 @@
+.article-dialog { width: min(720px, calc(100vw - 32px)); max-height: 85svh; overflow: auto; overscroll-behavior: contain; padding: 28px; border: 1px solid #77503a; border-radius: 16px; color: #f5f1eb; background: #211510; }
+.article-dialog::backdrop { background: #000b; }
+.article-close { display: block; margin-left: auto; }
+.article-dialog h2 { font-size: clamp(22px, 4vw, 30px); line-height: 1.4; margin: 24px 0; }
+.article-dialog h3 { font-size: 16px; margin: 24px 0 8px; }
+.article-dialog p { color: var(--muted); line-height: 1.85; font-size: 14px; }
+.article-dialog a:not(.button) { text-decoration: underline; text-underline-offset: 3px; }
+.article-dialog .article-kicker { color: var(--accent); font-size: 12px; }
+.article-dialog[open] { animation: article-enter 160ms ease-out; }
+@keyframes article-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 640px) { .article-dialog { padding: 20px; } }
+@media (prefers-reduced-motion: reduce) { .article-dialog[open] { animation: none; } }

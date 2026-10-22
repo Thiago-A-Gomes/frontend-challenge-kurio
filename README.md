@@ -15,6 +15,8 @@ Marketplace de arte digital desenvolvido com React e TypeScript. Catálogo, favo
 - Cupom `KURIO10`, checkout, pedido pendente e recibo confirmado pela API simulada.
 - Recuperação após timeout com a mesma tentativa de compra e atualizações de preço/disponibilidade via Socket.IO.
 - Interface responsiva, navegação por teclado e gerenciamento de foco em diálogos.
+- Quatro guias educativos com leitura em diálogo e inscrição demonstrativa na newsletter, validada e persistida pela API simulada.
+- Feedback da página e do intervalo de resultados, com filtros e paginação sem saltos de rolagem.
 
 Criadores e Aprenda apresentam “Em breve” com fundo animado. Login social e recursos sem integração exibem feedback de indisponibilidade.
 
@@ -114,7 +116,7 @@ Considere somente conjuntos completos do mesmo build: execuções interrompidas 
 
 ## Resultados da revisão
 
-**64 testes E2E aprovados**, sem falhas, instáveis ou ignorados, em Chromium desktop/mobile. As oito baselines passaram sem atualização. [Resumo por teste](Kurio/reports/tests/ANALISE.md) · [Relatório HTML para download](Kurio/reports/tests/html-report.zip).
+**74 testes E2E aprovados**, sem falhas, instáveis ou ignorados, em Chromium desktop/mobile. As oito comparações visuais passaram; as duas baselines do início foram revisadas para incluir o contador de resultados. [Resumo por teste](Kurio/reports/tests/ANALISE.md) · [Relatório HTML para download](Kurio/reports/tests/html-report.zip).
 
 | Lighthouse — mediana de três execuções | Desempenho | Acessibilidade | Boas práticas | SEO |
 | --- | ---: | ---: | ---: | ---: |
@@ -123,7 +125,7 @@ Considere somente conjuntos completos do mesmo build: execuções interrompidas 
 | Detalhe mobile | 90 | 97 | 100 | 100 |
 | Detalhe desktop | 100 | 97 | 100 | 100 |
 
-O início mobile ainda fica abaixo da meta de desempenho 90. A auditoria adicional de Criadores também identificou mudanças de layout. [Revisão consolidada e limitações](Kurio/reports/REVISAO_GERAL.md) · [LCP, CLS, TBT e medianas](Kurio/reports/lighthouse/MEDIANAS.md) · [Auditorias HTML/JSON para download](Kurio/reports/lighthouse/audit-reports.zip).
+O início mobile ainda fica abaixo da meta de desempenho 90. Em Criadores, o desempenho mediano ficou em 91 no mobile e 100 no desktop, com CLS mediano zero após corrigir a reserva de carregamento. [Revisão consolidada e limitações](Kurio/reports/REVISAO_GERAL.md) · [LCP, CLS, TBT e medianas](Kurio/reports/lighthouse/MEDIANAS.md) · [Auditorias HTML/JSON para download](Kurio/reports/lighthouse/audit-reports.zip).
 
 Resultados medidos em build local otimizado, Node 22.23.4, Chrome 155 e Lighthouse 13.5.0. O audit de produção registrou zero vulnerabilidades; o audit completo ainda registra oito ocorrências em ferramentas de desenvolvimento, documentadas na revisão. Esses resultados não certificam segurança de produção nem atribuem pontuação final ao desafio.
 

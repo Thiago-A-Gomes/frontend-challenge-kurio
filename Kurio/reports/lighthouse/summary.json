@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22T01:23:28.579Z",
-  "startedAt": "2026-10-22T01:20:57.417Z",
+  "date": "2026-10-22T02:22:56.467Z",
+  "startedAt": "2026-10-22T02:20:15.995Z",
   "complete": true,
   "configurationVersion": 4,
   "environment": {
@@ -11,50 +11,62 @@
     "playwright": "^1.64.1",
     "platform": "win32",
     "cpu": "AMD Ryzen 5 5600G with Radeon Graphics         ",
-    "base": "http://127.0.0.1:5191",
+    "base": "http://127.0.0.1:5192",
     "cache": "HTTP cleared before every sample; Service Worker preinstalled",
     "mocks": "reset before every sample; default scenario; 180ms latency"
   },
   "build": [
     {
-      "name": "AccountLayout-DQDWE9me.js",
-      "sha256": "559b33da98ea31616c434d4dbb7ed82c21c10b84b976ffc91232422b271617a8"
+      "name": "AccountLayout-DR0qV5iQ.js",
+      "sha256": "3b89eda8196b9e791cfea67052d91c72fff14818ba776357e0944150d6e5ff5c"
     },
     {
-      "name": "AuthPage-CszKz9xV.js",
-      "sha256": "7429aa96210cb7f9890e188602f377860c17f919c4c241df351ca3a4275d196f"
+      "name": "ArticleDialog-DxATvrZM.css",
+      "sha256": "1d52f98f1d7fd9160cd475716b74c876c66ee4fe509f2e12cba3ea5a5d75c60d"
     },
     {
-      "name": "browser-Cb7uJltP.js",
-      "sha256": "4c206a20879ec57fee4dfddbab8436bb09821eafb687888e6fa73243f22142c2"
+      "name": "ArticleDialog-DynyPE0C.js",
+      "sha256": "9da395990cc052c2ea2fa49e0b53959ad2a15af3170e5755aa93dcc3e80e28c1"
     },
     {
-      "name": "button-BKUObTA4.js",
-      "sha256": "ffbd1a1b7b0e35134e10789e1f22454075a5d73fd4c6cbabf99147c651e6962b"
+      "name": "AuthPage-DJJ9xn2f.js",
+      "sha256": "418ab0357f080d97752d16102ef20eda416d4701765c5853b43011b2adb020a4"
     },
     {
-      "name": "CartPage-CV1vaCiQ.js",
-      "sha256": "dbb80c8dfaec57612ad59647818fc6f65a1bb1b0ab490b9751f7a50edd528d56"
+      "name": "browser-CJFdPYFF.js",
+      "sha256": "fd1069d38b730d6797205b554af4fbaf40b23056fa19bee4d16032710072bbb2"
     },
     {
-      "name": "CheckoutPage-BJ-5LP8m.js",
-      "sha256": "d86622c47e81906f98a31b3cda7635c44fb0d3fe3a85b5699fdfa686151ac203"
+      "name": "button-CjNODcad.js",
+      "sha256": "0fe02a89b52e37562c50e193e8a6e193ed8021e9f450035bdc6c138df0f46215"
     },
     {
-      "name": "CollectionRecommendations-qCd8cuEe.js",
-      "sha256": "6220d1ab2768d8a66abee532fd9e3541cf2c3ede9570d903e52f77ef4d16ff2c"
+      "name": "CartPage-3Tg9eKjd.js",
+      "sha256": "94d94691f51972ef64228979e8275e2acaa7c85243375d820a602d7180393b88"
     },
     {
-      "name": "ComingSoonPage-CTEsK7fO.js",
-      "sha256": "7041c1bd5f6e1aded56c2fe2263d2190195efed97805b67ff5cf1ca133dfbf9f"
+      "name": "CheckoutPage-BBWGOXht.js",
+      "sha256": "62d47f1d4896c5ca4a5ef666fa0c2eee0e46384317140215798b2cf6b07b1044"
     },
     {
-      "name": "FinancialSummary-ClDiHCuI.js",
-      "sha256": "7ae8d1f0a4b741f9875a1a8da51ef9797e2f27911d46e69eeb4fab0532b118c0"
+      "name": "CollectionRecommendations-rqScAuEI.js",
+      "sha256": "742893c6a449fa5349da2b548c058bc709ad317a98609caae9e9c2e48d636d42"
     },
     {
-      "name": "index-BEMYMIJ8.css",
-      "sha256": "52caa3ecca45540b0ea2136d6d418c0abcc20049434ac16b3e0e738a4706fbe6"
+      "name": "ComingSoonPage-CJsEuMMn.js",
+      "sha256": "78af5d5a6686ccddc5444081f64909b783ad019b19a149c7bac163ffa2ebf2d9"
+    },
+    {
+      "name": "FinancialSummary-Cp28StZ3.js",
+      "sha256": "9fa1c33ec471343a8407e2ae7e6f4debbe38d9ec78925a2d3ab89b01d33c5c63"
+    },
+    {
+      "name": "index-6u1Z6QJZ.css",
+      "sha256": "519587af88ca52f377c3843c9926df17e73e3a0385718a46bf48f258b42cc2f1"
+    },
+    {
+      "name": "index-8RPkiDce.js",
+      "sha256": "e40b2e30d7dcc9b31032151f56c3ae5d9b2bc1a38667ebd4e81d6c8f2fee22ca"
     },
     {
       "name": "index-BX6FNL3i.js",
@@ -65,32 +77,28 @@
       "sha256": "94799d4411ef3df250e78c2d3e9c5392e89d9fc92798efa1b9a70625aecbd59b"
     },
     {
-      "name": "index-xIJNk0PF.js",
-      "sha256": "0e17faeecbff4d028ce7f6f33b6104b4d6f317f98a8796d2669ed3a1aa10a4a7"
+      "name": "input-_IB5h6Vt.js",
+      "sha256": "57ad0080efc11041060f3eab4839b68e14873d9d6b6b2d6ee2b5d0d967b9bd3e"
     },
     {
-      "name": "input-IcPB1Mpm.js",
-      "sha256": "225f8744f3946ff14afe06264f6617bf773952104dcbf0236eb48333d1fc838f"
+      "name": "NftDetailsPage-CeyEvp5O.js",
+      "sha256": "c13f40ed33cc214e12218218c47979c859e50345630b15a923349f27a24b4728"
     },
     {
-      "name": "NftDetailsPage-Ddap9Y7m.js",
-      "sha256": "8542c01d7e103ce0092ea05ccf5e2a84bf740ac927cef8c2f8e9d5d594d1d97f"
+      "name": "OrderPage-DpMaA5Ah.js",
+      "sha256": "2eb1b8f4c5128c971a8f5d8153fbd98ced41b8be4bd678b2deb360beb33d8b42"
     },
     {
-      "name": "OrderPage-BnTpIgiF.js",
-      "sha256": "49d68ab2ec0fa2837e4755330131dbe44821444ca42c61e0a92b5210d0392263"
+      "name": "PasswordInput-C_n1VZ2x.js",
+      "sha256": "bdd7fdeb926c6fdd369e581c2bb1944a8c02da1020c7f1935e8707ffceba0a1a"
     },
     {
-      "name": "PasswordInput-BfeGLV1k.js",
-      "sha256": "b96ce1730c18be946f073e4c74e858beeaf8348b7b1e8f170eeaedfc2b9ab1d7"
+      "name": "ProfilePage-DWRuMnAa.js",
+      "sha256": "5312e2364b6395c877b84824dadac4cdc9c6991fda49b27946fb6e74a97862a5"
     },
     {
-      "name": "ProfilePage-B8TVEAak.js",
-      "sha256": "2de7eb2d56fdcb40b8cd73be43035fa5bd9d12c2587b2c86d8954cfb1309556f"
-    },
-    {
-      "name": "WalletsPage-DI3lZPSM.js",
-      "sha256": "9d135ba94e9e43593f4804012e95856fd569f02af5c872eda35c0e4de0bcb265"
+      "name": "WalletsPage-JyXTTVen.js",
+      "sha256": "4b903fc0beb49df6cbcd24bb7fd3ea1856c9b7bfe53c8508de7d551d8d770c5b"
     }
   ],
   "invalidAttempts": [],
@@ -101,13 +109,13 @@
       "run": 1,
       "version": "13.5.0",
       "scores": {
-        "performance": 89,
+        "performance": 88,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3305.15095,
-      "cls": 0,
+      "lcpMs": 3390.259325,
+      "cls": 0.05718934225465025,
       "tbtMs": 43
     },
     {
@@ -121,9 +129,9 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3342.0698500000008,
+      "lcpMs": 3316.221675,
       "cls": 0,
-      "tbtMs": 30
+      "tbtMs": 32
     },
     {
       "page": "inicio",
@@ -136,9 +144,9 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3326.824125,
+      "lcpMs": 3334.5486499999997,
       "cls": 0,
-      "tbtMs": 30
+      "tbtMs": 31
     },
     {
       "page": "inicio",
@@ -151,41 +159,41 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 779.9229,
-      "cls": 0,
-      "tbtMs": 0
-    },
-    {
-      "page": "inicio",
-      "profile": "desktop",
-      "run": 2,
-      "version": "13.5.0",
-      "scores": {
-        "performance": 99,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcpMs": 785.96205,
-      "cls": 0,
-      "tbtMs": 0
-    },
-    {
-      "page": "inicio",
-      "profile": "desktop",
-      "run": 3,
-      "version": "13.5.0",
-      "scores": {
-        "performance": 99,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcpMs": 779.56335,
+      "lcpMs": 779.45435,
       "cls": 0.02887312844759653,
       "tbtMs": 0
     },
     {
+      "page": "inicio",
+      "profile": "desktop",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 767.2360500000001,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 756.07015,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
       "page": "detalhe",
       "profile": "mobile",
       "run": 1,
@@ -196,7 +204,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3241.8140000000003,
+      "lcpMs": 3233.2724,
       "cls": 0.01196131801947877,
       "tbtMs": 0
     },
@@ -211,7 +219,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3238.9776,
+      "lcpMs": 3237.0581999999995,
       "cls": 0.01196131801947877,
       "tbtMs": 0
     },
@@ -226,7 +234,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3236.6859999999997,
+      "lcpMs": 3237.3781999999997,
       "cls": 0.01196131801947877,
       "tbtMs": 0
     },
@@ -241,7 +249,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 756.5340000000001,
+      "lcpMs": 730.9335999999998,
       "cls": 0.007052272130286315,
       "tbtMs": 0
     },
@@ -256,7 +264,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 731.4443999999999,
+      "lcpMs": 735.2894000000001,
       "cls": 0.007052272130286315,
       "tbtMs": 0
     },
@@ -266,14 +274,14 @@
       "run": 3,
       "version": "13.5.0",
       "scores": {
-        "performance": 100,
+        "performance": 58,
         "accessibility": 97,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 737.4996000000001,
+      "lcpMs": 1705.5387999999998,
       "cls": 0.007052272130286315,
-      "tbtMs": 0
+      "tbtMs": 1902.6104499999997
     },
     {
       "page": "criadores",
@@ -281,78 +289,33 @@
       "run": 1,
       "version": "13.5.0",
       "scores": {
-        "performance": 78,
+        "performance": 91,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3160.1323249999996,
-      "cls": 0.2526961198976786,
-      "tbtMs": 10
-    },
-    {
-      "page": "criadores",
-      "profile": "mobile",
-      "run": 2,
-      "version": "13.5.0",
-      "scores": {
-        "performance": 78,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcpMs": 3159.0757999999996,
-      "cls": 0.2526961198976786,
-      "tbtMs": 6
-    },
-    {
-      "page": "criadores",
-      "profile": "mobile",
-      "run": 3,
-      "version": "13.5.0",
-      "scores": {
-        "performance": 78,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcpMs": 3154.3528000000006,
-      "cls": 0.2526961198976786,
+      "lcpMs": 3155.5248999999994,
+      "cls": 0,
       "tbtMs": 5
     },
     {
       "page": "criadores",
-      "profile": "desktop",
-      "run": 1,
-      "version": "13.5.0",
-      "scores": {
-        "performance": 89,
-        "accessibility": 100,
-        "best-practices": 100,
-        "seo": 100
-      },
-      "lcpMs": 700.9136000000001,
-      "cls": 0.22598021189037734,
-      "tbtMs": 0
-    },
-    {
-      "page": "criadores",
-      "profile": "desktop",
+      "profile": "mobile",
       "run": 2,
       "version": "13.5.0",
       "scores": {
-        "performance": 89,
+        "performance": 90,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 701.256725,
-      "cls": 0.22598021189037734,
-      "tbtMs": 0
+      "lcpMs": 3164.6026250000004,
+      "cls": 0,
+      "tbtMs": 9
     },
     {
       "page": "criadores",
-      "profile": "desktop",
+      "profile": "mobile",
       "run": 3,
       "version": "13.5.0",
       "scores": {
@@ -361,8 +324,53 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 697.462725,
-      "cls": 0.1971070834427808,
+      "lcpMs": 3156.2047749999997,
+      "cls": 0,
+      "tbtMs": 7
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 700.6949500000001,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 706.3769000000002,
+      "cls": 0.02887312844759653,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 708.4684500000001,
+      "cls": 0,
       "tbtMs": 0
     }
   ],
@@ -376,9 +384,9 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3326.824125,
+      "lcpMs": 3334.5486499999997,
       "cls": 0,
-      "tbtMs": 30
+      "tbtMs": 32
     },
     {
       "page": "inicio",
@@ -389,7 +397,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 779.9229,
+      "lcpMs": 767.2360500000001,
       "cls": 0,
       "tbtMs": 0
     },
@@ -402,7 +410,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3238.9776,
+      "lcpMs": 3237.0581999999995,
       "cls": 0.01196131801947877,
       "tbtMs": 0
     },
@@ -415,7 +423,7 @@
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 737.4996000000001,
+      "lcpMs": 735.2894000000001,
       "cls": 0.007052272130286315,
       "tbtMs": 0
     },
@@ -423,26 +431,26 @@
       "page": "criadores",
       "profile": "mobile",
       "scores": {
-        "performance": 78,
+        "performance": 91,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 3159.0757999999996,
-      "cls": 0.2526961198976786,
-      "tbtMs": 6
+      "lcpMs": 3156.2047749999997,
+      "cls": 0,
+      "tbtMs": 7
     },
     {
       "page": "criadores",
       "profile": "desktop",
       "scores": {
-        "performance": 89,
+        "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 100
       },
-      "lcpMs": 700.9136000000001,
-      "cls": 0.22598021189037734,
+      "lcpMs": 706.3769000000002,
+      "cls": 0,
       "tbtMs": 0
     }
   ]

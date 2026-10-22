@@ -112,6 +112,20 @@ function handle(action: (db: Database, request: Request, params: PathParams) => 
 }
 
 export const handlers = [
+  // PT: Cadastro local idempotente; não expõe lista de e-mails nem envia mensagens.
+  // EN: Idempotent local registration; never lists addresses or sends messages.
+  http.post('/api/newsletter/subscriptions', handle(async (db, request) => {
+    if (scenario() === 'newsletter-error') throw new MockError('Não foi possível salvar sua inscrição. Tente novamente.', 503);
+    const body = await request.json() as Payload;
+    const email = text(body, 'email').toLowerCase();
+    if (!emailValid(email) || email.length > 254 || /[<>]/.test(email)) throw new MockError('Informe um e-mail válido.');
+    const existing = db.newsletterSubscriptions.find((item) => item.email === email);
+    if (existing) return { ...existing, alreadySubscribed: true, simulated: true };
+    if (db.newsletterSubscriptions.length >= 2000) throw new MockError('Limite da demonstração atingido.', 429);
+    const subscription = { id: crypto.randomUUID(), email, subscribedAt: new Date().toISOString() };
+    db.newsletterSubscriptions.push(subscription);
+    return { ...subscription, alreadySubscribed: false, simulated: true };
+  })),
   http.post('/api/demo/disconnect', handle(() => { disconnectMockConnections(); return {}; })),
   http.patch('/api/demo/nfts/:id', handle(async (db, request, params) => {
     const body = await request.json() as Payload;

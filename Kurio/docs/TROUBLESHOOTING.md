@@ -80,6 +80,20 @@ EN: Audit the optimized preview on port 5191 using the four required categories.
 
 ## Reset deliberado / Deliberate reset
 
+### Banners, artigos e newsletter / Banners, articles and newsletter
+
+PT: Os dois banners usam links com filtros diferentes e limpam filtros antigos. Mudanças de busca/paginação preservam a posição da tela; o contador mostra a página e o intervalo reais retornados pela API. Os itens adicionais reutilizam algumas artes, mas cada card deve abrir seu próprio identificador no detalhe.
+
+EN: Banners use distinct filter links and clear stale filters. Search/pagination preserve scroll; the counter shows the API's actual page and range. Additional fixtures reuse some art, but every card must open its own detail identifier.
+
+PT: Ler mais baixa o chunk ArticleDialog apenas ao abrir. Se o download falhar após um deploy, atualize a página para obter o manifesto atual. O diálogo tem controle de Tab/Escape e devolve foco ao acionador. Preserve essa lógica em StrictMode para não fechar o diálogo durante a verificação de efeitos do React.
+
+EN: Read more downloads ArticleDialog on demand. Refresh after a deployment if an old page references a removed chunk. Preserve Tab/Escape handling, focus restoration and StrictMode-safe dialog closing.
+
+PT: A inscrição deve aguardar POST /api/newsletter/subscriptions. O cenário newsletter-error retorna 503, mantém o texto digitado e permite nova tentativa. O reset remove também as inscrições locais. Não conecte um serviço real mantendo a mensagem de demonstração ou anunciando envio sem confirmação do servidor.
+
+EN: Subscription must await the REST response. newsletter-error returns 503, retaining input and allowing retry. Demo reset clears local subscriptions too. A real mail integration requires accurate consent, delivery feedback and server-side validation.
+
 ### Avisos de instalação na Vercel / Vercel installation warnings
 
 PT: `engines.node` usa `^22.19.0`, limitado à linha principal 22. Os scripts de instalação aprovados constam de `allowScripts`, por pacote e versão: esbuild 0.25.12, MSW 2.10.5 e Sharp 0.33.5. Ao atualizar um desses pacotes, revise o novo script antes de atualizar sua aprovação; não habilite todos os scripts globalmente.

@@ -1,10 +1,11 @@
 /**
- * PT: Renderiza links, benefícios e newsletter sem aparentar sucesso de ações fora do escopo.
- * EN: Renders links, benefits and newsletter without pretending out-of-scope actions succeeded.
+ * PT: Compõe benefícios, links e cadastro demonstrativo de newsletter via API.
+ * EN: Composes benefits, links and API-backed demo newsletter registration.
  */
 import type { PendingFeatureHandler } from '../../../shared/types/feedback';
 import { SocialIcon } from '../SocialIcon';
 import { Link } from '@tanstack/react-router';
+import { NewsletterForm } from '../../../features/newsletter/NewsletterForm';
 
 const benefits = [
   { symbol: 'W', title: 'Segurança da carteira', text: 'Proteja sua carteira e colecione arte digital verificada com confiança.' },
@@ -18,7 +19,7 @@ const linkGroups = [
   { title: 'Coleções', links: ['Arte digital', 'Fotografia', 'Música', 'Arte 3D', 'Utilidade'] },
 ];
 
-// Componentes recebem ações por props; nenhum cadastro fictício é anunciado.
+// A inscrição é confirmada pela API e identificada como demonstração local.
 export function SiteFooter({ onPendingFeature }: { onPendingFeature: PendingFeatureHandler }) {
   return (
     <footer className="home-footer" aria-label="Rodapé Kurio">
@@ -31,19 +32,7 @@ export function SiteFooter({ onPendingFeature }: { onPendingFeature: PendingFeat
         ))}
         <section className="newsletter" aria-labelledby="newsletter-title">
           <h2 id="newsletter-title">Antecipe-se ao próximo lançamento</h2>
-          {/*
-            type=email e required usam a validação nativa do navegador.
-            preventDefault evita recarregar a página. Ainda não há serviço de envio:
-            a ação informa a indisponibilidade, sem afirmar que houve inscrição.
-          */}
-          <form onSubmit={(event) => { event.preventDefault(); onPendingFeature('Inscrição na newsletter'); }}>
-            <label className="visually-hidden" htmlFor="newsletter-email">Seu e-mail</label>
-            <div className="newsletter-field">
-              <input id="newsletter-email" type="email" name="email" autoComplete="email" placeholder="Digite seu e-mail..." required />
-              <button className="button" type="submit">Enviar</button>
-            </div>
-          </form>
-          <p>Receba lançamentos selecionados, histórias de criadores e novidades do mercado.</p>
+          <NewsletterForm />
         </section>
       </div>
       <div className="footer-brand-row">

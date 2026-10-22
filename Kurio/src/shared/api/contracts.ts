@@ -30,3 +30,11 @@ export type Order = {
 export type CatalogSearch = { q: string; collection: string; network: string; sort: string; page: number; min: string; max: string; category: string };
 export type CatalogResponse = { items: Product[]; total: number; pages: number; page: number };
 export type ApiError = { message: string; fields?: Record<string, string> };
+export type NewsletterSubscription = {
+  id: string;
+  email: string;
+  subscribedAt: string;
+  alreadySubscribed: boolean;
+  simulated: true;
+};
+

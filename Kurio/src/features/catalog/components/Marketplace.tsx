@@ -12,6 +12,7 @@ import type { Collection } from '../model/collection';
 import type { PendingFeatureHandler } from '../../../shared/types/feedback';
 import '../catalog.css';
 import type { CatalogSearch } from '../../../shared/api/contracts';
+import { defaultCatalogSearch } from '../search';
 
 // O catálogo recebe dados por props: não depende de fixtures nem de HTTP.
 // A página decide de onde os dados vêm; este componente decide como exibi-los.
@@ -21,10 +22,13 @@ type MarketplaceProps = {
   onPendingFeature: PendingFeatureHandler;
   search: CatalogSearch;
   pages: number;
+  total: number;
+  currentPage: number;
+  updating: boolean;
   onSearch: (change: Partial<CatalogSearch>) => void;
 };
 
-export function Marketplace({ nfts, collections, search, pages, onSearch }: MarketplaceProps) {
+export function Marketplace({ nfts, collections, search, pages, total, currentPage, updating, onSearch }: MarketplaceProps) {
   const mobile = useMediaQuery('(max-width: 640px)');
   const filterDialog = useRef<HTMLDialogElement>(null);
   const sidebar = (<aside className="marketplace-sidebar" aria-label="Filtros e destaque do catálogo">
@@ -63,10 +67,11 @@ export function Marketplace({ nfts, collections, search, pages, onSearch }: Mark
           <label className="catalog-sort-note">Ordenar por: <select value={search.sort} onChange={(event) => onSearch({ sort: event.target.value })}><option value="recent">Listados recentemente</option><option value="name">Nome (A–Z)</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option></select></label>
         </div>
         <label className="catalog-search-label" htmlFor="catalog-search">Buscar NFT</label>
-        <div className="inline-field catalog-search-field"><input id="catalog-search" type="search" value={search.q} onChange={(event) => onSearch({ q: event.target.value })} placeholder="Nome do NFT..." /><button className="text-action" onClick={() => onSearch({ ...search, q: '', collection: '', network: '', min: '', max: '', category: 'all' })}>Limpar filtros</button></div>
+        <div className="inline-field catalog-search-field"><input id="catalog-search" type="search" value={search.q} onChange={(event) => onSearch({ q: event.target.value })} placeholder="Nome do NFT..." /><button className="text-action" onClick={() => onSearch(defaultCatalogSearch)}>Limpar filtros</button></div>
 
         {/* map cria um card por objeto; key mantém a identidade de cada NFT. */}
-        <div className="nft-grid">
+        <p className="catalog-results" role="status" aria-live="polite">{updating ? 'Atualizando resultados...' : `Página ${currentPage} de ${pages} · ${total ? (currentPage - 1) * 9 + 1 : 0}–${Math.min(currentPage * 9, total)} de ${total} NFTs`}</p>
+        <div className="nft-grid" aria-busy={updating}>
           {!nfts.length && <p role="status">Nenhum NFT encontrado. Tente outros filtros.</p>}
           {nfts.map((nft, index) => (
             <NftCard
@@ -79,9 +84,9 @@ export function Marketplace({ nfts, collections, search, pages, onSearch }: Mark
         {/* A API informa as páginas; cada botão atualiza a URL e consulta outros itens. */}
         <nav className="catalog-pagination" aria-label="Paginação do catálogo">
           {Array.from({ length: pages }, (_, index) => index + 1).map((page) => (
-            <button key={page} type="button" aria-label={`Página ${page}`} aria-current={page === search.page ? 'page' : undefined} onClick={() => onSearch({ page })}>{page}</button>
+            <button key={page} type="button" aria-label={`Página ${page}`} aria-current={page === currentPage ? 'page' : undefined} disabled={updating} onClick={() => onSearch({ page })}>{page}</button>
           ))}
-          <button type="button" aria-label="Próxima página" disabled={search.page >= pages} onClick={() => onSearch({ page: search.page + 1 })}>›</button>
+          <button type="button" aria-label="Próxima página" disabled={updating || currentPage >= pages} onClick={() => onSearch({ page: currentPage + 1 })}>›</button>
         </nav>
       </div>
     </section>

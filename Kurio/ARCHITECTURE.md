@@ -60,9 +60,9 @@ PT: Fonte Roboto Mono e imagens são locais. PNGs originais preservados; entrega
 
 EN: Fonts/images are local. Original PNGs remain; delivery uses WebP up to 900 px. Earlier AI background adjustments may differ from Figma. Mobile uses fluid columns, native filter dialogs, compact navigation and full-screen auth without dropping features. Focus, Escape, labels, feedback, reduced motion and password-manager compatibility are preserved.
 
-PT: Criadores e Aprenda exibem Em breve com fundo animado. Artigos, suporte e login social não aparentam sucesso funcional. Carteiras, pagamento e explorador são explicitamente simulados. Totais do Figma não são fixados na UI. O catálogo adicional é fictício para exercitar quatro páginas.
+PT: Criadores e Aprenda exibem Em breve com fundo animado. Os artigos educativos abrem em diálogo e carregam seu conteúdo sob demanda. A newsletter usa Axios/MSW e persistência local, sem envio de mensagens. Suporte e login social informam indisponibilidade. Carteiras, pagamento e explorador são simulados. O catálogo adicional é fictício para exercitar quatro páginas; a página e o intervalo de resultados são visíveis, sem salto de rolagem a cada filtro.
 
-EN: Creators/Learn show coming-soon screens. Editorial/support/social actions do not pretend to succeed. Wallets, payments and explorer are explicitly simulated. Reference totals are not hardcoded. Additional catalog entries are fictional pagination fixtures.
+EN: Creators/Learn show coming-soon screens. Educational articles open in an on-demand dialog. Newsletter registration uses Axios/MSW with local persistence and no message delivery. Support/social actions disclose unavailability. Wallets/payments remain simulated. Pagination fixtures reuse some artwork, with visible page/range feedback and stable scroll during filter changes.
 
 ## Documentação e evidências / Documentation and evidence
 

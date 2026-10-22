@@ -55,12 +55,15 @@ const homeRoute = createRoute({
   component: function HomeRoute() {
     const { onPendingFeature } = rootRoute.useRouteContext();
     const search = homeRoute.useSearch(), navigate = homeRoute.useNavigate();
-    return <HomePage search={search} onSearch={(change) => navigate({ search: (previous) => ({ ...previous, ...change, page: change.page ?? 1 }), hash: 'mercado' })} onPendingFeature={onPendingFeature} />;
+    return <HomePage search={search} onSearch={(change) => navigate({ search: (previous) => ({ ...previous, ...change, page: change.page ?? 1 }), resetScroll: false, hashScrollIntoView: false })} onPendingFeature={onPendingFeature} />;
   },
 });
 
-const creatorsRoute = createRoute({ getParentRoute: () => rootRoute, path: '/criadores', component: () => <ComingSoonPage section="creators" /> });
-const learnRoute = createRoute({ getParentRoute: () => rootRoute, path: '/aprenda', component: () => <ComingSoonPage section="learn" /> });
+// PT: Reserva as dimensões reais da página para evitar o salto medido no Lighthouse.
+// EN: Reserve actual page dimensions to prevent the Lighthouse-observed layout shift.
+const ComingSoonPending = () => <section className="coming-soon" aria-busy="true"><p role="status">Carregando conteúdo...</p></section>;
+const creatorsRoute = createRoute({ getParentRoute: () => rootRoute, path: '/criadores', pendingComponent: ComingSoonPending, component: () => <ComingSoonPage section="creators" /> });
+const learnRoute = createRoute({ getParentRoute: () => rootRoute, path: '/aprenda', pendingComponent: ComingSoonPending, component: () => <ComingSoonPage section="learn" /> });
 
 const nftRoute = createRoute({
   getParentRoute: () => rootRoute,

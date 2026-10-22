@@ -35,11 +35,14 @@ export function HomePage({ onPendingFeature, search = defaultCatalogSearch, onSe
         collections={collections.data ?? []}
         search={search}
         pages={catalog.data.pages}
+        total={catalog.data.total}
+        currentPage={catalog.data.page}
+        updating={catalog.isFetching}
         onSearch={onSearch}
         onPendingFeature={onPendingFeature}
       />}
-      <div className="home-editorial"><PromotionalBanners onPendingFeature={onPendingFeature} /></div>
-      <div className="home-journal"><MintJournal onPendingFeature={onPendingFeature} /></div>
+      <div className="home-editorial"><PromotionalBanners /></div>
+      <div className="home-journal"><MintJournal /></div>
     </>
   );
 }

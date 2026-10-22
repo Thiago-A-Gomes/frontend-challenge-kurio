@@ -14,6 +14,7 @@ export type Database = {
   carts: Record<string, { lines: CartLine[]; coupon: string }>;
   quotes: Record<string, { owner: string; quote: Quote; signature: string }>;
   orders: StoredOrder[];
+  newsletterSubscriptions: { id: string; email: string; subscribedAt: string }[];
 };
 const STORAGE_KEY = 'kurio.mock-database.v1';
 let memory: Database | undefined;
@@ -44,7 +45,7 @@ async function seed(): Promise<Database> {
     })),
     users: ['ana', 'bruno'].map((id) => ({ id, name: id === 'ana' ? 'Ana Colecionadora' : 'Bruno Colecionador', username: id, ens: `${id}.eth`, walletNickname: 'Minha carteira', email: `${id}@kurio.test`, avatar: '', salt: 'kurio-demo-salt', passwordHash,
       wallets: [{ id: `${id}-wallet`, name: 'Carteira principal', network: 'Ethereum', address: `0x${id === 'ana' ? '1' : '2'}`.padEnd(42, id === 'ana' ? '1' : '2'), primary: true, nickname: 'Principal', profileName: id, type: 'MetaMask', email: `${id}@kurio.test`, ens: `${id}.eth`, referralCode: '', secondaryAddress: '' }], favorites: [] })),
-    sessions: {}, carts: {}, quotes: {}, orders: [],
+    sessions: {}, carts: {}, quotes: {}, orders: [], newsletterSubscriptions: [],
   };
 }
 export async function database(): Promise<Database> {
@@ -54,6 +55,7 @@ export async function database(): Promise<Database> {
     if (stored) {
       try {
         memory = JSON.parse(stored) as Database;
+        memory.newsletterSubscriptions ??= [];
         // Migra a prévia anterior sem apagar contas, carteiras ou carrinhos salvos.
         memory.products.forEach((product) => { product.details ??= nftDetailFixture(product); product.details.rating = nftDetailFixture(product).rating; product.details.reviewCount = nftDetailFixture(product).reviewCount; if (product.image.endsWith('.png')) product.image = product.image.replace(/\.png$/, '.webp'); });
         // Completa o card identificado na nova referência, mantendo seu id antigo

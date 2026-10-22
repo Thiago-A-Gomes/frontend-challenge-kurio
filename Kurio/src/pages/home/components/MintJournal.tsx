@@ -1,18 +1,18 @@
 /**
- * PT: Apresenta prévias editoriais; a entrega não inclui um sistema de publicação.
- * EN: Presents editorial previews; the deliverable does not include a publishing system.
+ * PT: Abre guias locais em um diálogo acessível sem tirar o visitante do catálogo.
+ * EN: Opens local guides in an accessible dialog without leaving the catalog.
  */
-import type { PendingFeatureHandler } from '../../../shared/types/feedback';
+import { lazy, Suspense, useState } from 'react';
+import { articles, type JournalArticle } from '../../../features/editorial/articles';
 
-// Conteúdo editorial de apresentação, sem API ou rotas de artigos nesta etapa.
-const articles = [
-  { id: 'propriedade', image: 'neon-vessel-552-uniform.webp', date: '12 de setembro', duration: 6, title: 'Como funciona a propriedade de NFTs', description: 'Aprenda a colecionar, negociar e verificar obras digitais.' },
-  { id: 'artistas', image: 'emerald-ape-042.webp', date: '13 de setembro', duration: 2, title: '10 artistas digitais para acompanhar', description: 'Conheça criadores que moldam a cultura digital.' },
-  { id: 'raridade', image: 'sage-nomad-009-uniform.webp', date: '15 de setembro', duration: 3, title: 'Raridade, atributos e procedência', description: 'Entenda raridade, procedência, direitos autorais e utilidade.' },
-  { id: 'carteira', image: 'golden-beat-207-uniform.webp', date: '15 de setembro', duration: 2, title: 'Como proteger sua carteira', description: 'Proteja sua carteira, seus ativos e sua identidade.' },
-];
+// PT: O texto completo e o diálogo só são baixados ao solicitar leitura.
+// EN: Full content and dialog are downloaded only when reading is requested.
+const ArticleDialog = lazy(() => import('../../../features/editorial/ArticleDialog').then((module) => ({ default: module.ArticleDialog })));
 
-export function MintJournal({ onPendingFeature }: { onPendingFeature: PendingFeatureHandler }) {
+// Conteúdo educativo local; regras de compra continuam exclusivamente na API.
+
+export function MintJournal() {
+  const [selected, setSelected] = useState<JournalArticle | null>(null);
   return (
     <section className="mint-journal" aria-labelledby="journal-title">
       <div className="journal-heading">
@@ -26,13 +26,14 @@ export function MintJournal({ onPendingFeature }: { onPendingFeature: PendingFea
             <img src={`/images/marketplace/${article.image}`} alt="" width="450" height="450" loading="lazy" />
             <div className="journal-card-copy">
               <p className="journal-meta">{article.date} | Leitura de {article.duration} min</p>
-              <h3><button type="button" onClick={() => onPendingFeature(`Artigo: ${article.title}`)}>{article.title}</button></h3>
+              <h3><button type="button" onClick={() => setSelected(article)}>{article.title}</button></h3>
               <p>{article.description}</p>
-              <button className="journal-read" type="button" onClick={() => onPendingFeature(`Artigo: ${article.title}`)} aria-label={`Ler: ${article.title}`}>Ler mais <span aria-hidden="true">→</span></button>
+              <button className="journal-read" type="button" onClick={() => setSelected(article)} aria-label={`Ler: ${article.title}`}>Ler mais <span aria-hidden="true">→</span></button>
             </div>
           </article>
         ))}
       </div>
+      {selected && <Suspense fallback={<p role="status">Carregando artigo...</p>}><ArticleDialog article={selected} onDismiss={() => setSelected(null)} /></Suspense>}
     </section>
   );
 }

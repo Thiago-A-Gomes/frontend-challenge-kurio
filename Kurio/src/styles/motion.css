@@ -1,0 +1,12 @@
+/* PT: Movimento por interação, sem deslocar o layout. EN: Interaction motion without layout shifts. */
+.catalog-results { min-height: 20px; margin: 0 0 16px; color: var(--muted); font-size: 12px; line-height: 20px; }
+.newsletter-field button:disabled { opacity: .65; cursor: wait; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .nft-card, .journal-card { transition: transform 160ms ease-out; }
+  .nft-card:hover, .journal-card:hover { transform: translateY(-3px); }
+  .promotion .button { transition: transform 160ms ease-out; }
+  .promotion .button:hover { transform: translateY(-2px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .button:active { transform: scale(.98); }
+}
