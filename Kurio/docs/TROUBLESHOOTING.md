@@ -13,9 +13,9 @@ npm run check
 npm run dev
 ```
 
-PT: Recomenda-se Node 20.19+ ou uma versão LTS compatível. O ambiente original tinha Node 20.9; alguns CLIs transitivos avisam sobre incompatibilidade. O build foi verificado no ambiente registrado nos relatórios. `npm ci` respeita o lockfile; não substitua por upgrades indiscriminados.
+PT: Use Node 22.19 ou superior. ESLint 10 e Lighthouse 13 exigem runtime suportado. O ambiente original usava Node 20.9; a revisão usa Node 22.23.4. `npm ci` respeita o lockfile; não substitua por upgrades indiscriminados.
 
-EN: Node 20.19+ or a compatible LTS version is recommended. The original environment used Node 20.9; some transitive CLIs warn about compatibility. The build was checked in the environment recorded in the reports. `npm ci` respects the lockfile; avoid indiscriminate upgrades.
+EN: Use Node 22.19 or later for ESLint 10 and Lighthouse 13. The original runtime was Node 20.9; this revision uses Node 22.23.4. Keep the lockfile and avoid indiscriminate upgrades.
 
 | Sintoma / Symptom | Diagnóstico e reparo / Diagnosis and repair |
 |---|---|
@@ -79,6 +79,14 @@ PT: Para Lighthouse, use o build otimizado no preview 5191 e as quatro categoria
 EN: Audit the optimized preview on port 5191 using the four required categories. All-category `!` or `scoreDisplayMode: error` indicates collection failure, not proof that controls pass/fail. The script rejects these runs. IndexedDB warnings indicate existing local state; automated samples reset mocks and HTTP cache. Preinstalled-worker conditions are documented. Automated scores do not certify manual accessibility checks. Verify HTTPS, redirects and HSTS on the deployed host.
 
 ## Reset deliberado / Deliberate reset
+
+PT: Se aparecer “This library called use() to suspend”, mantenha React.lazy nas rotas secundárias. Não substitua por lazyRouteComponent sem testar o ciclo de suspensão no React 19. Se a galeria mobile voltar a exibir miniaturas na lateral, confira a ordem das importações em main.tsx: estilos das páginas antes de mobile.css. Os testes visuais devem passar sem regenerar as baselines.
+
+EN: For “This library called use() to suspend”, retain React.lazy on secondary routes and test React 19 suspension before replacing it. If mobile thumbnails move beside the image, check main.tsx style order: page styles must precede mobile.css. Visual tests should pass without regenerating baselines.
+
+PT: npm pode avisar sobre @opentelemetry/sdk-trace-base, dependência transitiva do Lighthouse via Sentry. A versão atual do Lighthouse ainda a utiliza. Isso é um aviso da ferramenta de auditoria em Node, não uma API descontinuada executada pela página. Registre a cadeia e acompanhe a atualização upstream; não suprima avisos nem force uma versão incompatível.
+
+EN: npm may warn about @opentelemetry/sdk-trace-base, used transitively by Lighthouse through Sentry. This is a Node audit-tool dependency, not a deprecated browser API in the application. Track upstream migration rather than suppressing warnings or forcing incompatible packages.
 
 PT: Para retornar ao cenário fictício inicial, use a ação documentada `/api/demo/reset`. Isso apaga os dados simulados, incluindo contas criadas e pedidos. Faça apenas quando a reprodução exigir um estado novo. Os testes já isolam cada contexto.
 

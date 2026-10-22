@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-22T01:17:12.917Z",
+  "note": "Deployment inspected before the next source revision is deployed.",
+  "responses": [
+    {
+      "url": "https://frontend-challenge-kurio-tau.vercel.app/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' ws: wss:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
+        "strict-transport-security": "max-age=31536000",
+        "cross-origin-opener-policy": "same-origin",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      }
+    },
+    {
+      "url": "https://frontend-challenge-kurio-tau.vercel.app/criadores",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' ws: wss:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
+        "strict-transport-security": "max-age=31536000",
+        "cross-origin-opener-policy": "same-origin",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      }
+    },
+    {
+      "url": "https://frontend-challenge-kurio-tau.vercel.app/robots.txt",
+      "status": 200,
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' ws: wss:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
+        "strict-transport-security": "max-age=31536000",
+        "cross-origin-opener-policy": "same-origin",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      }
+    },
+    {
+      "url": "https://frontend-challenge-kurio-tau.vercel.app/mockServiceWorker.js",
+      "status": 200,
+      "headers": {
+        "content-type": "application/javascript; charset=utf-8",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' ws: wss:; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'",
+        "strict-transport-security": "max-age=31536000",
+        "cross-origin-opener-policy": "same-origin",
+        "x-frame-options": "DENY",
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin"
+      }
+    },
+    {
+      "url": "http://frontend-challenge-kurio-tau.vercel.app",
+      "status": 308,
+      "location": "https://frontend-challenge-kurio-tau.vercel.app/"
+    }
+  ]
+}

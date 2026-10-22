@@ -1,146 +1,171 @@
-# Kurio — Marketplace de NFTs
+# Kurio — NFT Marketplace
 
-Aplicação React + TypeScript com navegação TanStack Router, estado remoto
-TanStack Query, cliente Axios e API simulada na rede com MSW.
+Marketplace de arte digital desenvolvido com React e TypeScript. Catálogo, favoritos, conta de colecionador, carrinho e compra completa com pagamento simulado e recibo.
 
-## Execução
+**[Abrir demonstração](https://frontend-challenge-kurio-tau.vercel.app)** · **[Código no GitHub](https://github.com/Thiago-A-Gomes/frontend-challenge-kurio)**
+
+> Projeto de demonstração: NFTs, contas, carteiras e pagamentos são fictícios. Nenhuma transação financeira ou conexão com blockchain é realizada. Não utilize dados pessoais ou senhas reais.
+
+## Funcionalidades
+
+- Busca, filtros combinados, ordenação e paginação preservados na URL e no histórico.
+- Detalhe do NFT com galeria, edições, quantidade, avaliações fictícias e recomendações.
+- Cadastro, login, expiração de sessão e edição de perfil, avatar, senha e carteiras.
+- Favoritos e carrinho com persistência por usuário e recuperação de falhas.
+- Cupom `KURIO10`, checkout, pedido pendente e recibo confirmado pela API simulada.
+- Recuperação após timeout com a mesma tentativa de compra e atualizações de preço/disponibilidade via Socket.IO.
+- Interface responsiva, navegação por teclado e gerenciamento de foco em diálogos.
+
+Criadores e Aprenda apresentam “Em breve” com fundo animado. Login social e recursos sem integração exibem feedback de indisponibilidade.
+
+## Tecnologias
+
+| Responsabilidade | Ferramentas |
+| --- | --- |
+| Interface e build | React 19, TypeScript e Vite |
+| Rotas e estado remoto | TanStack Router e TanStack Query |
+| Requisições e simulação | Axios e Mock Service Worker (MSW) |
+| Tempo real | Socket.IO Client e binding Socket.IO/MSW |
+| Estilos e componentes | Tailwind CSS, Radix Slot e componentes no padrão shadcn/ui |
+| Qualidade | Playwright, ESLint e Lighthouse |
+
+REST passa pelos handlers MSW e os eventos passam pelo cliente Socket.IO. A interface aguarda a resposta da simulação para confirmar a compra. Os mocks também funcionam na demonstração publicada.
+
+## Executar localmente
+
+Requer **Node.js 22.19 ou superior** e npm. Use `localhost`, `127.0.0.1` ou HTTPS para registrar o Service Worker.
 
 ```sh
+git clone https://github.com/Thiago-A-Gomes/frontend-challenge-kurio.git
+cd frontend-challenge-kurio/Kurio
 npm ci
 npm run dev
 ```
 
-Abra o endereço do Vite. A interface pública aparece enquanto o MSW inicia;
-REST/Axios e Socket.IO aguardam sua instalação antes de enviar requisições.
-Os mocks funcionam também no build publicado. Use localhost/127.0.0.1 ou HTTPS.
-A variável `VITE_ENABLE_MOCKS` tem valor padrão `true`; `.env.example` documenta
-essa opção. `false` desativa os mocks e exige uma API em `/api`.
+Abra o endereço indicado pelo Vite. A aplicação mostra a preparação enquanto o MSW inicia. REST e Socket.IO aguardam a rede simulada ficar pronta.
+
+[.env.example](.env.example) documenta `VITE_ENABLE_MOCKS`, cujo padrão é `true`. Desativar os mocks exige uma API compatível em `/api` e transporte de tempo real correspondente.
+
+### Contas fictícias
+
+| E-mail | Senha |
+| --- | --- |
+| `ana@kurio.test` | `Kurio123!` |
+| `bruno@kurio.test` | `Kurio123!` |
+
+As contas iniciais possuem carteira simulada. Você também pode cadastrar uma conta. Dados são persistidos localmente pelo mock e separados por usuário.
+
+## Comandos
+
+| Comando | Finalidade |
+| --- | --- |
+| `npm run dev` | Desenvolvimento |
+| `npm run check` | TypeScript, lint, fronteiras arquiteturais e build |
+| `npm run build` | Build otimizado em `dist/` |
+| `npm run preview` | Conferir o build localmente |
+| `npm run test:e2e` | Testes E2E em desktop e mobile |
+| `npm run test:report` | Abrir relatório HTML do Playwright |
+| `npm run test:summary` | Resumir o último JSON de testes |
+| `npm run audit:performance` | Medir navegação e requisições |
+| `npm run audit:lighthouse` | Executar auditorias repetidas |
+
+### Testes e regressão visual
 
 ```sh
-npm run typecheck
-npm run build
-npm run preview
-npm run test:e2e
+npx playwright install chromium
+npm run test:e2e -- --workers=1
+npm run test:summary
 npm run test:report
 ```
 
-Antes dos testes, instale Chromium com `npx playwright install chromium`.
-Para usar Chrome já instalado no Windows:
+No Windows, para usar Chrome instalado:
 
 ```powershell
 $env:PLAYWRIGHT_CHANNEL = 'chrome'
 npm run test:e2e -- --workers=1
 ```
 
-Os testes usam servidor separado na porta 5180, contextos isolados, viewports
-1440 e 390, relatório HTML, JSON, screenshots e traces em falhas. As oito baselines
-de início, detalhe, carrinho e pagamento estão em `tests/e2e/visual.spec.ts-snapshots`.
-Use `npm run check` para validar TypeScript, lint, dependências arquiteturais e build.
+Os projetos Chromium usam viewports de 1440×900 e 390×844, além de cenários de responsividade. Cada teste começa em contexto isolado. A suíte cobre conta e compra, falhas, sessão, tempo real, teclado e comparação visual de início, detalhe, carrinho e pagamento.
 
-## Contas fictícias
+- [Testes E2E](tests/e2e) e [baselines versionadas](tests/e2e/visual.spec.ts-snapshots).
+- [JSON da última execução](reports/tests/results.json).
+- HTML gerado localmente: `playwright-report/index.html`.
+- Screenshots e traces de novas falhas: `test-results/`.
 
-- `ana@kurio.test` / `Kurio123!`
-- `bruno@kurio.test` / `Kurio123!`
+As baselines foram produzidas no Windows. Diferenças de sistema, fontes e navegador precisam de revisão visual. Não atualize snapshots apenas para esconder uma falha. A existência de testes não comprova aprovação; consulte o resultado da execução correspondente.
 
-Cada usuário tem uma carteira Ethereum simulada inicial. Novas contas podem
-cadastrar suas próprias carteiras. Cadastro, sessão, edição de perfil, senha,
-avatar, favoritos e carteiras passam pela API MSW. A senha é persistida como
-hash PBKDF2 com salt; o token de sessão simulado expira após uma hora.
-
-## Rotas
-
-| Endereço | Conteúdo |
-| --- | --- |
-| `/` | Início, catálogo e conteúdo editorial |
-| `/nfts/emerald-ape-042` | Detalhe de exemplo; o identificador é variável |
-| `/carrinho` | Itens, quantidades, cupom e resumo |
-| `/login` e `/cadastro` | Autenticação sobre a página inicial |
-| `/checkout` | Dados, carteira, revisão e envio |
-| `/pedidos/:id` | Recuperação do pedido e recibo |
-| `/perfil` | Dados, avatar e senha |
-| `/carteiras` | Cadastro e edição de carteiras |
-
-Perfil, carteiras, checkout e pedidos verificam sessão. A autenticação preserva
-o destino anterior e mescla os itens do visitante ao carrinho da conta.
-O catálogo usa query string para busca, filtros, ordenação e paginação.
-No deploy, configurar fallback para index.html para permitir refresh das rotas.
-
-## Fluxo demonstrável
-
-Abra um NFT, escolha edição e quantidade, clique Comprar. No carrinho aplique
-`KURIO10` para desconto de 10%. Finalize, entre com uma conta fictícia, preencha
-os dados e conecte a carteira simulada. Revise e confirme. O pedido fica pendente
-antes de ser confirmado ou recusado pela API. O recibo guarda seus próprios
-valores e o carrinho só remove as quantidades compradas após confirmação.
-
-Uma tentativa de pedido usa Idempotency-Key e é persistida antes do envio.
-Depois de timeout, Confirmar pedido primeiro busca a tentativa na API. O mesmo
-pedido pode ser retomado por seu endereço, inclusive após refresh.
-
-## Cenários de rede
-
-No console do navegador, configure e depois atualize a página:
-
-```js
-localStorage.setItem('kurio.scenario', 'slow')
-```
-
-Valores: `success`, `slow`, `empty`, `offline`, `server-error`, `expired`,
-`favorite-error`, `payment-refused`, `order-timeout`.
-
-- `slow`: latência de 2 segundos e skeletons.
-- `empty`: catálogo sem resultados.
-- `offline` / `server-error`: falha de conexão / HTTP 503.
-- `expired`: invalida sessão ao acessar um recurso autenticado.
-- `favorite-error`: rollback da atualização otimista de favoritos.
-- `payment-refused`: recusa o pedido, mantendo os itens no carrinho.
-- `order-timeout`: resposta de criação demora 15s; Axios expira em 12s,
-  permitindo recuperar a mesma tentativa sem criar outra compra.
-- Cupom `EXPIRADO` e qualquer código desconhecido exercitam erros de cupom.
-
-Para restaurar todos os dados e voltar ao cenário padrão:
-
-```js
-localStorage.setItem('kurio.scenario', 'success')
-await fetch('/api/demo/reset', { method: 'POST' })
-localStorage.removeItem('kurio.session-token')
-location.reload()
-```
-
-A simulação persiste dados em `kurio.mock-database.v1`. As tentativas de checkout
-usam chaves `kurio.checkout-attempt.<usuário>`; remova-as também para um reset
-completo de uma demonstração que foi interrompida durante a compra.
-
-## Organização e limites
-
-Consulte ARCHITECTURE.md, API.md, SCREEN_MAP.md, docs/CODE_GUIDE.md,
-docs/SECURITY.md e docs/TROUBLESHOOTING.md. Os módulos têm comentários de estudo
-em português e inglês. Fontes e imagens são locais. Alguns fundos foram uniformizados
-por edição de IA, com originais preservados e decisões registradas.
-
-As nove telas estão conectadas e há adaptações entre 320 e 1440 px. Tailwind e
-componentes no padrão shadcn/ui são usados com o estilo do Figma. Socket.IO passa
-pelo transporte WebSocket interceptado pelo MSW; eventos atualizam o cache Query,
-descartam versões antigas/duplicadas e reconciliam com REST na reconexão. Polling
-de pedidos pendentes a cada três segundos complementa a recuperação.
-Criadores e Aprenda apresentam “Em breve” com fundo animado; logins sociais e
-explorador blockchain são explicitamente indisponíveis/simulados.
-
-## Evidências e reprodução das auditorias
+### Auditoria do build
 
 ```sh
 npm run build
 npm run preview -- --host 127.0.0.1 --port 5191 --strictPort
-# Em outro terminal, mantendo o preview aberto:
+```
+
+Em outro terminal:
+
+```sh
 npm run audit:performance
 npm run audit:lighthouse
 ```
 
-O Lighthouse usa Chrome instalado, três execuções por página/perfil, cenário
-padrão MSW, cache HTTP limpo por amostra e worker previamente instalado. Imagens,
-fontes, animações e funcionalidades permanecem habilitadas. Consulte o relatório
-consolidado em `reports/REVISAO_GERAL.md` e os dados brutos em `reports/`.
-Medições locais não comprovam latência de um backend real nem segurança do deploy.
+O Lighthouse usa Chrome instalado, três execuções por página/perfil, mocks no cenário padrão e cache HTTP limpo por amostra. O worker é instalado antes das medições. Imagens, fontes, animações e funcionalidades permanecem habilitadas. Relatórios HTML/JSON e configuração registrada ficam em [reports/lighthouse](reports/lighthouse).
 
-Use Node >=20.19.0. A execução registrada usa Node 20.9.0 e registra essa diferença
-no ambiente; não é necessário ignorar essa condição para reproduzir em versão suportada.
+Considere somente conjuntos completos do mesmo build: execuções interrompidas não comprovam medianas ou metas. Audite o build otimizado; o servidor de desenvolvimento inclui módulos e verificações extras. CPU, rede e outros processos também afetam as notas.
+
+## Simular erros
+
+No console do navegador, escolha um cenário e recarregue:
+
+```js
+localStorage.setItem('kurio.scenario', 'slow')
+location.reload()
+```
+
+| Cenário | Comportamento |
+| --- | --- |
+| `success` | Fluxo padrão |
+| `slow` | Latência de dois segundos e carregamento visível |
+| `empty` | Catálogo vazio |
+| `offline` / `server-error` | Falha de rede / HTTP 503 |
+| `expired` | Expiração em recurso autenticado |
+| `favorite-error` | Falha da mutação e restauração do favorito |
+| `payment-refused` | Recusa preservando o carrinho |
+| `order-timeout` | Timeout após criar tentativa; recuperação do mesmo pedido |
+
+Para restaurar o banco fictício deste navegador, consulte o procedimento de reset em [API.md](API.md). O reset apaga alterações feitas na demonstração.
+
+## Organização
+
+```text
+src/
+├── app/       # Inicialização, rotas e composição
+├── pages/     # Telas e fluxos de navegação
+├── widgets/   # Blocos compartilhados de interface
+├── features/  # Catálogo, conta, carrinho e compra
+├── shared/    # Contratos, cliente HTTP, utilitários e UI
+├── mocks/     # Handlers REST, banco fictício e eventos
+└── styles/    # Estilos globais e responsividade
+tests/e2e/    # Fluxos, falhas e baselines
+scripts/      # Verificações, otimização e auditorias
+docs/         # Guias de manutenção e segurança
+reports/      # Evidências e medições
+```
+
+Comentários em português e inglês explicam responsabilidades e decisões. O lint também verifica as fronteiras entre camadas.
+
+## Documentação
+
+- [Arquitetura e decisões](ARCHITECTURE.md)
+- [Contratos da API e cenários](API.md)
+- [Mapa de telas](SCREEN_MAP.md)
+- [Guia do código em português e inglês](docs/CODE_GUIDE.md)
+- [Segurança e limites](docs/SECURITY.md)
+- [Diagnóstico e reparo](docs/TROUBLESHOOTING.md)
+
+## Publicação na Vercel
+
+Configure **Root Directory: `Kurio`**, **Build Command: `npm run build`** e **Output Directory: `dist`**. [vercel.json](vercel.json) configura fallback das rotas e cabeçalhos de segurança. Confirme os cabeçalhos e os fluxos no domínio publicado após o deploy.
+
+## Limites
+
+Este frontend demonstra integração com uma simulação determinística. Validações no navegador, isolamento por usuário e hashes no banco fictício não substituem autenticação, autorização e persistência em backend confiável. Não há pagamento, contrato blockchain ou login social real. Consulte o guia de segurança antes de adaptar o projeto para produção.

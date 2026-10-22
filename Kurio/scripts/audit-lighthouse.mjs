@@ -9,6 +9,8 @@ import puppeteer from 'puppeteer-core';
 
 const base = process.env.AUDIT_URL || 'http://127.0.0.1:5191';
 const folder = 'reports/lighthouse'; fs.mkdirSync(folder, { recursive: true });
+const startedAt = new Date().toISOString();
+fs.writeFileSync(`${folder}/run-status.json`, JSON.stringify({ startedAt, complete: false }, null, 2));
 const build = fs.readdirSync('dist/assets').map((name) => ({ name, sha256: createHash('sha256').update(fs.readFileSync(`dist/assets/${name}`)).digest('hex') }));
 const port = process.env.LIGHTHOUSE_PORT ? Number(process.env.LIGHTHOUSE_PORT) : await new Promise((resolve, reject) => {
   const server = net.createServer(); server.once('error', reject);
@@ -81,5 +83,7 @@ const medians = [...new Set(runs.map((r) => `${r.page}|${r.profile}`))].map((key
   const group = runs.filter((r) => `${r.page}|${r.profile}` === key);
   return { page: group[0].page, profile: group[0].profile, scores: Object.fromEntries(Object.keys(group[0].scores).map((category) => [category, median(group.map((r) => r.scores[category]))])), lcpMs: median(group.map((r) => r.lcpMs)), cls: median(group.map((r) => r.cls)), tbtMs: median(group.map((r) => r.tbtMs)) };
 });
-fs.writeFileSync(`${folder}/summary.json`, JSON.stringify({ date: new Date().toISOString(), configurationVersion: 3, environment: { node: process.version, chrome: browserVersion, platform: os.platform(), cpu: os.cpus()[0]?.model, base, cache: 'HTTP cleared before every sample; Service Worker preinstalled', mocks: 'reset before every sample; default scenario; 180ms latency' }, build, invalidAttempts, runs, medians }, null, 2));
+const tooling = JSON.parse(fs.readFileSync('package.json', 'utf8')).devDependencies;
+fs.writeFileSync(`${folder}/summary.json`, JSON.stringify({ date: new Date().toISOString(), startedAt, complete: true, configurationVersion: 4, environment: { node: process.version, chrome: browserVersion, lighthouse: tooling.lighthouse, puppeteer: tooling['puppeteer-core'], playwright: tooling['@playwright/test'], platform: os.platform(), cpu: os.cpus()[0]?.model, base, cache: 'HTTP cleared before every sample; Service Worker preinstalled', mocks: 'reset before every sample; default scenario; 180ms latency' }, build, invalidAttempts, runs, medians }, null, 2));
+fs.writeFileSync(`${folder}/run-status.json`, JSON.stringify({ startedAt, complete: true, samples: runs.length }, null, 2));
 fs.writeFileSync(`${folder}/MEDIANAS.md`, `# Lighthouse — três execuções por página e perfil\n\nPerfis padrão mobile e preset desktop. Build otimizado, imagens/fontes locais e MSW ativos. Service Worker previamente instalado; mocks restaurados e cache HTTP limpo antes de cada execução. Contexto sem extensões. Nenhuma auditoria com erro de coleta é aceita. Auditado localmente; não equivale a condições reais de todos os dispositivos.\n\n| Página | Perfil | Performance | Acessibilidade | Boas práticas | SEO | LCP (ms) | CLS | TBT (ms) |\n|---|---|---:|---:|---:|---:|---:|---:|---:|\n${medians.map((m) => `| ${m.page} | ${m.profile} | ${m.scores.performance} | ${m.scores.accessibility} | ${m.scores['best-practices']} | ${m.scores.seo} | ${Math.round(m.lcpMs)} | ${m.cls.toFixed(3)} | ${Math.round(m.tbtMs)} |`).join('\n')}\n\nMetas: 90 / 95 / 95 / 90. Relatórios individuais HTML/JSON e dados brutos acompanham este arquivo.\n`);

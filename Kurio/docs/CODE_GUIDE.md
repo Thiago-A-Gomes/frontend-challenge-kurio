@@ -24,8 +24,8 @@ Each module has a PT/EN comment. Comments explain responsibilities and boundarie
 | `src/features/catalog/model/nft.ts` | Define ou reexporta o modelo visual compartilhado de um NFT. | Defines or re-exports the shared NFT presentation model. |
 | `src/features/catalog/search.ts` | Normaliza parâmetros da URL e limita entradas antes de consultar a API. | Normalizes URL parameters and bounds input before querying the API. |
 | `src/features/realtime/useRealtime.ts` | Isola a conexão por sessão, descarta versões antigas e reconcilia o cache ao reconectar. | Scopes the connection to a session, rejects old versions and reconciles cache on reconnect. |
-| `src/main.tsx` | Renderiza a interface enquanto prepara a rede simulada; transportes aguardam sua instalação. | Renders the interface while preparing mocked networking; transports await installation. |
-| `src/shared/api/readiness.ts` | Coordena a disponibilidade do transporte sem bloquear o conteúdo público. | Coordinates transport readiness without blocking public content. |
+| `src/main.tsx` | Mostra preparação, instala MSW e monta a aplicação; fixa a ordem dos estilos mobile. | Shows preparation, starts MSW and mounts the app; stabilizes mobile style order. |
+| `src/shared/api/readiness.ts` | Impede REST e Socket.IO antes da instalação do worker. | Gates REST and Socket.IO until worker installation completes. |
 | `src/mocks/fixtures/reviews.ts` | Fornece avaliações fictícias variadas e determinísticas. | Provides varied deterministic fictional reviews. |
 | `src/mocks/browser.ts` | Registra interceptadores HTTP e WebSocket somente quando os mocks estão habilitados. | Registers HTTP and WebSocket interceptors only when mocks are enabled. |
 | `src/mocks/database.ts` | Persiste somente o cenário fictício e migra dados sem alterar snapshots de pedidos. | Persists the fictional scenario and migrates data without changing order snapshots. |

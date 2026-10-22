@@ -1,0 +1,668 @@
+{
+  "stats": {
+    "startTime": "2026-10-22T01:14:58.295Z",
+    "duration": 332487.228,
+    "expected": 64,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "projects": [
+    {
+      "name": "desktop"
+    },
+    {
+      "name": "mobile"
+    }
+  ],
+  "tests": [
+    {
+      "file": "acceptance.spec.ts",
+      "title": "filtros combinados, ordenação e histórico restauram controles e resultados",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1856,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "carregamento lento mostra skeleton e erro REST permite nova tentativa",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5120,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "avatar e senha validam erros, persistem e autenticam com a nova senha",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6122,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "edição de carteira rejeita endereço inválido e persiste correção",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5049,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "preço e disponibilidade via Socket.IO invalidam revisão no checkout",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7952,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "pedido pendente retoma após desconexão e clique repetido cria uma tentativa",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 9912,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "teclado mantém foco no diálogo e valida formulário de login",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1224,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "filtros combinados, ordenação e histórico restauram controles e resultados",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1993,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "carregamento lento mostra skeleton e erro REST permite nova tentativa",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7103,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "avatar e senha validam erros, persistem e autenticam com a nova senha",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5975,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "edição de carteira rejeita endereço inválido e persiste correção",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 4741,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "preço e disponibilidade via Socket.IO invalidam revisão no checkout",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7912,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "pedido pendente retoma após desconexão e clique repetido cria uma tentativa",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 8680,
+      "attachments": []
+    },
+    {
+      "file": "acceptance.spec.ts",
+      "title": "teclado mantém foco no diálogo e valida formulário de login",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1105,
+      "attachments": []
+    },
+    {
+      "file": "console.spec.ts",
+      "title": "fluxo principal não registra erro React, exceção ou recurso estático quebrado",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 11801,
+      "attachments": [
+        {
+          "name": "console-and-issues.json"
+        }
+      ]
+    },
+    {
+      "file": "console.spec.ts",
+      "title": "fluxo principal não registra erro React, exceção ou recurso estático quebrado",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 11930,
+      "attachments": [
+        {
+          "name": "console-and-issues.json"
+        }
+      ]
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "catálogo, filtros na URL, refresh e detalhe inexistente",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1365,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "compra do detalhe ao pedido confirmado com persistência",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 10967,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "perfil, carteira e logout sem exposição de dados",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6371,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "painel do NFT, galeria ampliada, avaliações e largura da página",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1736,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "carrinho com quantidade, cupom, recomendações e remoção",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 4752,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "catálogo, filtros na URL, refresh e detalhe inexistente",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1560,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "compra do detalhe ao pedido confirmado com persistência",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 11063,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "perfil, carteira e logout sem exposição de dados",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6323,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "painel do NFT, galeria ampliada, avaliações e largura da página",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1658,
+      "attachments": []
+    },
+    {
+      "file": "core.spec.ts",
+      "title": "carrinho com quantidade, cupom, recomendações e remoção",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 4758,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "favorito otimista reverte quando a API falha e permite nova tentativa",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5707,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "eventos Socket.IO duplicados e antigos não revertem preço do carrinho",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3710,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "cotação antiga gera conflito, sem criar uma compra",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2842,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "mesma chave recupera pedido, corpo diferente conflita e recibo é imutável",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7246,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "pagamento recusado preserva o carrinho",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7307,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "sessão expirada protege o perfil e exige autenticação novamente",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2609,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "busca com latência variável mantém a resposta mais recente",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 833,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "timeout após criação recupera o mesmo pedido sem segundo envio",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 16943,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "checkout preserva rascunho após expiração e nova autenticação",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5990,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "favorito otimista reverte quando a API falha e permite nova tentativa",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5657,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "eventos Socket.IO duplicados e antigos não revertem preço do carrinho",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3575,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "cotação antiga gera conflito, sem criar uma compra",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3281,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "mesma chave recupera pedido, corpo diferente conflita e recibo é imutável",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7700,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "pagamento recusado preserva o carrinho",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6790,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "sessão expirada protege o perfil e exige autenticação novamente",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3053,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "busca com latência variável mantém a resposta mais recente",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 748,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "timeout após criação recupera o mesmo pedido sem segundo envio",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 16985,
+      "attachments": []
+    },
+    {
+      "file": "recovery.spec.ts",
+      "title": "checkout preserva rascunho após expiração e nova autenticação",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 5982,
+      "attachments": []
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "páginas e filtros se adaptam entre 320 e 1440 pixels",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7440,
+      "attachments": []
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "login mobile tem campos alinhados e permanece utilizável em 320px",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1614,
+      "attachments": []
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "páginas e filtros se adaptam entre 320 e 1440 pixels",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7297,
+      "attachments": []
+    },
+    {
+      "file": "responsive.spec.ts",
+      "title": "login mobile tem campos alinhados e permanece utilizável em 320px",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1617,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "carrossel troca a cada três segundos mesmo com mouse sobre o banner",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6961,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "catálogo oferece quatro páginas reais e preserva a página ao recarregar",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1506,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "cadastro com os quatro campos do Figma cria uma sessão",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2635,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "carrossel troca a cada três segundos mesmo com mouse sobre o banner",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6924,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "catálogo oferece quatro páginas reais e preserva a página ao recarregar",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1392,
+      "attachments": []
+    },
+    {
+      "file": "revision.spec.ts",
+      "title": "cadastro com os quatro campos do Figma cria uma sessão",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2593,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "API rejeita recursos privados sem sessão e JSON com prototype pollution",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1079,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "cadastro conflitante e nome de usuário injetado são rejeitados",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1088,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "carteira de outro usuário não pode ser editada e falha não remove principal",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1700,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "payload HTML em nome é exibido como texto e avatar SVG é rejeitado",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 2965,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "API rejeita recursos privados sem sessão e JSON com prototype pollution",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1046,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "cadastro conflitante e nome de usuário injetado são rejeitados",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1031,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "carteira de outro usuário não pode ser editada e falha não remove principal",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 1705,
+      "attachments": []
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "payload HTML em nome é exibido como texto e avatar SVG é rejeitado",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 3508,
+      "attachments": []
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "regressão visual de início, detalhe, carrinho e pagamento",
+      "project": "desktop",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 7555,
+      "attachments": []
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "regressão visual de início, detalhe, carrinho e pagamento",
+      "project": "mobile",
+      "status": "expected",
+      "result": "passed",
+      "attempts": 1,
+      "durationMs": 6469,
+      "attachments": []
+    }
+  ]
+}

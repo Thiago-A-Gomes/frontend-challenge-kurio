@@ -36,9 +36,9 @@ EN: Shared modules never import upper layers. Features never import pages, widge
 
 ## Estado, cache e compra / State, cache and purchase
 
-PT: Páginas secundárias usam imports dinâmicos. O conteúdo público renderiza enquanto o bootstrap prepara MSW; `shared/api/readiness` bloqueia somente as requisições Axios e o início do Socket.IO até o worker estar ativo. Isso evita tanto a tela em branco durante a preparação quanto requisições escapando dos mocks. Fonte variável WOFF2 com Latin/símbolos e fallback completo preserva caracteres; imagens editoriais usam os mesmos WebPs do catálogo para reutilizar downloads.
+PT: Páginas secundárias usam React.lazy e imports dinâmicos. O bootstrap mostra preparação e monta a aplicação após instalar MSW; `shared/api/readiness` também protege Axios e Socket.IO. Os estilos das páginas são importados antes das regras mobile para manter a cascata determinística, independentemente da ordem de navegação. Fonte WOFF2 com Latin/símbolos e fallback completo preserva caracteres; imagens editoriais reutilizam WebPs do catálogo.
 
-EN: Secondary pages use dynamic imports. Public content renders while bootstrap prepares MSW; shared transport readiness gates Axios and Socket.IO until interception is active. This avoids blank startup without letting API requests bypass mocks. WOFF2 subsets retain a full-character fallback; editorial imagery reuses catalog WebPs.
+EN: Secondary pages use React.lazy and dynamic imports. Bootstrap shows preparation and mounts the app after MSW starts; transport readiness also gates Axios and Socket.IO. Page styles precede mobile overrides so navigation order cannot change the cascade. WOFF2 subsets retain a full-character fallback; editorial imagery reuses catalog WebPs.
 
 PT: Router controla rota e filtros na URL. Query controla estado remoto; componentes controlam edições e diálogos. Cache válido por 15 s e coletado após 5 min sem observadores. Uma tentativa extra para falhas transitórias de consultas; 400/401/403/404/409 não repetem. Mutações não repetem automaticamente. Favoritos usam atualização otimista com rollback. Cancelamento usa AbortSignal. Login/logout cancelam consultas e removem dados privados sem desligar o observador da sessão. Um 401 de token antigo não apaga sessão nova.
 

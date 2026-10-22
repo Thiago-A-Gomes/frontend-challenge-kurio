@@ -2,7 +2,8 @@
  * PT: Define rotas tipadas, filtros na URL e proteção dos fluxos autenticados.
  * EN: Defines typed routes, URL filters and guards for authenticated flows.
  */
-import { createRootRouteWithContext, createRoute, createRouter, lazyRouteComponent, Link, notFound, Outlet, redirect } from '@tanstack/react-router';
+import { lazy } from 'react';
+import { createRootRouteWithContext, createRoute, createRouter, Link, notFound, Outlet, redirect } from '@tanstack/react-router';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { AppLayout } from '../widgets/layout/AppLayout';
@@ -17,14 +18,16 @@ import type { PendingFeatureHandler } from '../shared/types/feedback';
 
 // PT: Cada página carrega seu código ao ser aberta; o início mantém todos os recursos.
 // EN: Each page loads its code when opened; home retains all functionality.
-const ComingSoonPage = lazyRouteComponent(() => import('../pages/ComingSoonPage'), 'ComingSoonPage');
-const NftDetailsPage = lazyRouteComponent(() => import('../pages/nft-details/NftDetailsPage'), 'NftDetailsPage');
-const CartPage = lazyRouteComponent(() => import('../pages/cart/CartPage'), 'CartPage');
-const AuthPage = lazyRouteComponent(() => import('../pages/auth/AuthPage'), 'AuthPage');
-const ProfilePage = lazyRouteComponent(() => import('../pages/account/ProfilePage'), 'ProfilePage');
-const WalletsPage = lazyRouteComponent(() => import('../pages/account/WalletsPage'), 'WalletsPage');
-const CheckoutPage = lazyRouteComponent(() => import('../pages/checkout/CheckoutPage'), 'CheckoutPage');
-const OrderPage = lazyRouteComponent(() => import('../pages/order/OrderPage'), 'OrderPage');
+// PT: React.lazy mantém o ciclo de suspensão sob controle do React, inclusive no StrictMode.
+// EN: React.lazy lets React manage suspension consistently, including StrictMode.
+const ComingSoonPage = lazy(() => import('../pages/ComingSoonPage').then((module) => ({ default: module.ComingSoonPage })));
+const NftDetailsPage = lazy(() => import('../pages/nft-details/NftDetailsPage').then((module) => ({ default: module.NftDetailsPage })));
+const CartPage = lazy(() => import('../pages/cart/CartPage').then((module) => ({ default: module.CartPage })));
+const AuthPage = lazy(() => import('../pages/auth/AuthPage').then((module) => ({ default: module.AuthPage })));
+const ProfilePage = lazy(() => import('../pages/account/ProfilePage').then((module) => ({ default: module.ProfilePage })));
+const WalletsPage = lazy(() => import('../pages/account/WalletsPage').then((module) => ({ default: module.WalletsPage })));
+const CheckoutPage = lazy(() => import('../pages/checkout/CheckoutPage').then((module) => ({ default: module.CheckoutPage })));
+const OrderPage = lazy(() => import('../pages/order/OrderPage').then((module) => ({ default: module.OrderPage })));
 
 // Contexto compartilha o feedback sem fazer as páginas importarem o App.
 type RouterContext = { message: string; onPendingFeature: PendingFeatureHandler };

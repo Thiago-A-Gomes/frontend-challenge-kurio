@@ -1,0 +1,7 @@
+[
+  {
+    "path": "node_modules/@opentelemetry/sdk-trace-base",
+    "version": "2.12.0",
+    "message": "Use @opentelemetry/sdk-trace package"
+  }
+]

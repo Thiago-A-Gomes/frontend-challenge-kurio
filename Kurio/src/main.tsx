@@ -8,6 +8,16 @@ import { App } from './app/App';
 import { setNetworkReadiness } from './shared/api/readiness';
 import './styles/tailwind.css';
 import './styles/global.css';
+// PT: A ordem dos estilos é fixa; navegar entre chunks não pode sobrescrever o mobile.
+// EN: Keep style order stable so lazy route chunks cannot override mobile rules.
+import './features/catalog/recommendations.css';
+import './pages/nft-details/nft-details.css';
+import './pages/cart/cart.css';
+import './pages/auth/auth.css';
+import './pages/account/account.css';
+import './pages/checkout/checkout.css';
+import './pages/order/order.css';
+import './pages/coming-soon.css';
 import './styles/mobile.css';
 
 // O HTML fornece uma única div; o React monta os componentes dentro dela.
