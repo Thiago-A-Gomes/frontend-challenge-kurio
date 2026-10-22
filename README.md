@@ -112,6 +112,21 @@ O Lighthouse usa Chrome instalado, três execuções por página/perfil, mocks n
 
 Considere somente conjuntos completos do mesmo build: execuções interrompidas não comprovam medianas ou metas. Audite o build otimizado; o servidor de desenvolvimento inclui módulos e verificações extras. CPU, rede e outros processos também afetam as notas.
 
+## Resultados da revisão
+
+**64 testes E2E aprovados**, sem falhas, instáveis ou ignorados, em Chromium desktop/mobile. As oito baselines passaram sem atualização. [Resumo por teste](Kurio/reports/tests/ANALISE.md) · [Relatório HTML para download](Kurio/reports/tests/html-report.zip).
+
+| Lighthouse — mediana de três execuções | Desempenho | Acessibilidade | Boas práticas | SEO |
+| --- | ---: | ---: | ---: | ---: |
+| Início mobile | 89 | 100 | 100 | 100 |
+| Início desktop | 99 | 100 | 100 | 100 |
+| Detalhe mobile | 90 | 97 | 100 | 100 |
+| Detalhe desktop | 100 | 97 | 100 | 100 |
+
+O início mobile ainda fica abaixo da meta de desempenho 90. A auditoria adicional de Criadores também identificou mudanças de layout. [Revisão consolidada e limitações](Kurio/reports/REVISAO_GERAL.md) · [LCP, CLS, TBT e medianas](Kurio/reports/lighthouse/MEDIANAS.md) · [Auditorias HTML/JSON para download](Kurio/reports/lighthouse/audit-reports.zip).
+
+Resultados medidos em build local otimizado, Node 22.23.4, Chrome 155 e Lighthouse 13.5.0. O audit de produção registrou zero vulnerabilidades; o audit completo ainda registra oito ocorrências em ferramentas de desenvolvimento, documentadas na revisão. Esses resultados não certificam segurança de produção nem atribuem pontuação final ao desafio.
+
 ## Simular erros
 
 No console do navegador, escolha um cenário e recarregue:

@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-21T20:53:29.844Z",
+  "date": "2026-10-22T01:25:14.417Z",
   "environment": {
-    "node": "v20.9.0",
+    "node": "v22.23.4",
     "platform": "win32",
     "cpu": "AMD Ryzen 5 5600G with Radeon Graphics         ",
     "baseURL": "http://127.0.0.1:5191",
@@ -14,109 +14,109 @@
       "width": 390,
       "run": 1,
       "operation": "Início carregado (navegação completa)",
-      "durationMs": 1084
+      "durationMs": 486
     },
     {
       "width": 390,
       "run": 1,
       "operation": "Início → Detalhe (SPA)",
-      "durationMs": 46
+      "durationMs": 71
     },
     {
       "width": 390,
       "run": 1,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1052
+      "durationMs": 1773
     },
     {
       "width": 390,
       "run": 2,
       "operation": "Início carregado (navegação completa)",
-      "durationMs": 941
+      "durationMs": 419
     },
     {
       "width": 390,
       "run": 2,
       "operation": "Início → Detalhe (SPA)",
-      "durationMs": 40
+      "durationMs": 57
     },
     {
       "width": 390,
       "run": 2,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1064
+      "durationMs": 1771
     },
     {
       "width": 390,
       "run": 3,
       "operation": "Início carregado (navegação completa)",
-      "durationMs": 940
+      "durationMs": 446
     },
     {
       "width": 390,
       "run": 3,
       "operation": "Início → Detalhe (SPA)",
-      "durationMs": 43
+      "durationMs": 60
     },
     {
       "width": 390,
       "run": 3,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1075
+      "durationMs": 1868
     },
     {
       "width": 1440,
       "run": 1,
       "operation": "Início carregado (navegação completa)",
-      "durationMs": 998
+      "durationMs": 427
     },
     {
       "width": 1440,
       "run": 1,
-      "operation": "Início → Detalhe (SPA)",
-      "durationMs": 124
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1087
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "operation": "Início carregado (navegação completa)",
-      "durationMs": 1016
-    },
-    {
-      "width": 1440,
-      "run": 2,
       "operation": "Início → Detalhe (SPA)",
       "durationMs": 55
     },
     {
       "width": 1440,
+      "run": 1,
+      "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
+      "durationMs": 1858
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "operation": "Início carregado (navegação completa)",
+      "durationMs": 463
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "operation": "Início → Detalhe (SPA)",
+      "durationMs": 47
+    },
+    {
+      "width": 1440,
       "run": 2,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1102
+      "durationMs": 1760
     },
     {
       "width": 1440,
       "run": 3,
       "operation": "Início carregado (navegação completa)",
-      "durationMs": 961
+      "durationMs": 444
     },
     {
       "width": 1440,
       "run": 3,
       "operation": "Início → Detalhe (SPA)",
-      "durationMs": 58
+      "durationMs": 45
     },
     {
       "width": 1440,
       "run": 3,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "durationMs": 1069
+      "durationMs": 1755
     }
   ],
   "requests": [
@@ -126,7 +126,7 @@
       "method": "GET",
       "resource": "/api/session",
       "status": 200,
-      "durationMs": 264
+      "durationMs": 261
     },
     {
       "width": 390,
@@ -134,7 +134,7 @@
       "method": "GET",
       "resource": "/api/nfts",
       "status": 200,
-      "durationMs": 262
+      "durationMs": 260
     },
     {
       "width": 390,
@@ -142,7 +142,7 @@
       "method": "GET",
       "resource": "/api/collections",
       "status": 200,
-      "durationMs": 262
+      "durationMs": 260
     },
     {
       "width": 390,
@@ -150,7 +150,7 @@
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
-      "durationMs": 207
+      "durationMs": 210
     },
     {
       "width": 390,
@@ -158,7 +158,7 @@
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042",
       "status": 200,
-      "durationMs": 189
+      "durationMs": 194
     },
     {
       "width": 390,
@@ -166,7 +166,7 @@
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042/related",
       "status": 200,
-      "durationMs": 197
+      "durationMs": 203
     },
     {
       "width": 390,
@@ -174,7 +174,7 @@
       "method": "POST",
       "resource": "/api/cart/items",
       "status": 200,
-      "durationMs": 205
+      "durationMs": 198
     },
     {
       "width": 390,
@@ -182,7 +182,7 @@
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
-      "durationMs": 199
+      "durationMs": 183
     },
     {
       "width": 390,
@@ -190,7 +190,7 @@
       "method": "GET",
       "resource": "/api/recommendations",
       "status": 200,
-      "durationMs": 196
+      "durationMs": 199
     },
     {
       "width": 390,
@@ -198,23 +198,7 @@
       "method": "POST",
       "resource": "/api/quotes",
       "status": 200,
-      "durationMs": 201
-    },
-    {
-      "width": 390,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/session",
-      "status": 200,
-      "durationMs": 255
-    },
-    {
-      "width": 390,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/nfts",
-      "status": 200,
-      "durationMs": 254
+      "durationMs": 203
     },
     {
       "width": 390,
@@ -222,11 +206,107 @@
       "method": "GET",
       "resource": "/api/collections",
       "status": 200,
-      "durationMs": 254
+      "durationMs": 258
     },
     {
       "width": 390,
       "run": 2,
+      "method": "GET",
+      "resource": "/api/session",
+      "status": 200,
+      "durationMs": 258
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts",
+      "status": 200,
+      "durationMs": 258
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 190
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts/emerald-ape-042",
+      "status": 200,
+      "durationMs": 202
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts/emerald-ape-042/related",
+      "status": 200,
+      "durationMs": 202
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "POST",
+      "resource": "/api/cart/items",
+      "status": 200,
+      "durationMs": 206
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 187
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/recommendations",
+      "status": 200,
+      "durationMs": 193
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "method": "POST",
+      "resource": "/api/quotes",
+      "status": 200,
+      "durationMs": 196
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "method": "GET",
+      "resource": "/api/session",
+      "status": 200,
+      "durationMs": 261
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "method": "GET",
+      "resource": "/api/nfts",
+      "status": 200,
+      "durationMs": 261
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "method": "GET",
+      "resource": "/api/collections",
+      "status": 200,
+      "durationMs": 261
+    },
+    {
+      "width": 390,
+      "run": 3,
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
@@ -234,299 +314,219 @@
     },
     {
       "width": 390,
-      "run": 2,
+      "run": 3,
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042",
       "status": 200,
-      "durationMs": 202
+      "durationMs": 207
     },
     {
       "width": 390,
-      "run": 2,
+      "run": 3,
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042/related",
+      "status": 200,
+      "durationMs": 199
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "method": "POST",
+      "resource": "/api/cart/items",
       "status": 200,
       "durationMs": 197
     },
     {
       "width": 390,
-      "run": 2,
-      "method": "POST",
-      "resource": "/api/cart/items",
+      "run": 3,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 199
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "method": "GET",
+      "resource": "/api/recommendations",
       "status": 200,
       "durationMs": 198
     },
     {
       "width": 390,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 189
-    },
-    {
-      "width": 390,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/recommendations",
-      "status": 200,
-      "durationMs": 193
-    },
-    {
-      "width": 390,
-      "run": 2,
+      "run": 3,
       "method": "POST",
       "resource": "/api/quotes",
       "status": 200,
-      "durationMs": 201
+      "durationMs": 204
     },
     {
-      "width": 390,
-      "run": 3,
+      "width": 1440,
+      "run": 1,
       "method": "GET",
       "resource": "/api/session",
       "status": 200,
-      "durationMs": 234
+      "durationMs": 260
     },
     {
-      "width": 390,
-      "run": 3,
+      "width": 1440,
+      "run": 1,
       "method": "GET",
       "resource": "/api/nfts",
       "status": 200,
-      "durationMs": 233
+      "durationMs": 259
     },
     {
-      "width": 390,
-      "run": 3,
+      "width": 1440,
+      "run": 1,
       "method": "GET",
       "resource": "/api/collections",
       "status": 200,
-      "durationMs": 233
+      "durationMs": 259
     },
     {
-      "width": 390,
-      "run": 3,
+      "width": 1440,
+      "run": 1,
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
       "durationMs": 209
     },
     {
-      "width": 390,
-      "run": 3,
-      "method": "GET",
-      "resource": "/api/nfts/emerald-ape-042",
-      "status": 200,
-      "durationMs": 201
-    },
-    {
-      "width": 390,
-      "run": 3,
-      "method": "GET",
-      "resource": "/api/nfts/emerald-ape-042/related",
-      "status": 200,
-      "durationMs": 199
-    },
-    {
-      "width": 390,
-      "run": 3,
-      "method": "POST",
-      "resource": "/api/cart/items",
-      "status": 200,
-      "durationMs": 198
-    },
-    {
-      "width": 390,
-      "run": 3,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 192
-    },
-    {
-      "width": 390,
-      "run": 3,
-      "method": "GET",
-      "resource": "/api/recommendations",
-      "status": 200,
-      "durationMs": 200
-    },
-    {
-      "width": 390,
-      "run": 3,
-      "method": "POST",
-      "resource": "/api/quotes",
-      "status": 200,
-      "durationMs": 220
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/session",
-      "status": 200,
-      "durationMs": 287
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/nfts",
-      "status": 200,
-      "durationMs": 286
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/collections",
-      "status": 200,
-      "durationMs": 286
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 206
-    },
-    {
       "width": 1440,
       "run": 1,
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042",
-      "status": 200,
-      "durationMs": 217
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/nfts/emerald-ape-042/related",
-      "status": 200,
-      "durationMs": 193
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "POST",
-      "resource": "/api/cart/items",
-      "status": 200,
-      "durationMs": 197
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 184
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "GET",
-      "resource": "/api/recommendations",
-      "status": 200,
-      "durationMs": 195
-    },
-    {
-      "width": 1440,
-      "run": 1,
-      "method": "POST",
-      "resource": "/api/quotes",
-      "status": 200,
-      "durationMs": 206
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/session",
-      "status": 200,
-      "durationMs": 312
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/nfts",
-      "status": 200,
-      "durationMs": 311
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/collections",
-      "status": 200,
-      "durationMs": 312
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 223
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/nfts/emerald-ape-042",
-      "status": 200,
-      "durationMs": 204
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/nfts/emerald-ape-042/related",
-      "status": 200,
-      "durationMs": 199
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "POST",
-      "resource": "/api/cart/items",
-      "status": 200,
-      "durationMs": 196
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/cart",
-      "status": 200,
-      "durationMs": 188
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "GET",
-      "resource": "/api/recommendations",
-      "status": 200,
-      "durationMs": 193
-    },
-    {
-      "width": 1440,
-      "run": 2,
-      "method": "POST",
-      "resource": "/api/quotes",
       "status": 200,
       "durationMs": 202
     },
     {
       "width": 1440,
+      "run": 1,
+      "method": "GET",
+      "resource": "/api/nfts/emerald-ape-042/related",
+      "status": 200,
+      "durationMs": 207
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "method": "POST",
+      "resource": "/api/cart/items",
+      "status": 200,
+      "durationMs": 199
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 199
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "method": "GET",
+      "resource": "/api/recommendations",
+      "status": 200,
+      "durationMs": 187
+    },
+    {
+      "width": 1440,
+      "run": 1,
+      "method": "POST",
+      "resource": "/api/quotes",
+      "status": 200,
+      "durationMs": 192
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/session",
+      "status": 200,
+      "durationMs": 246
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts",
+      "status": 200,
+      "durationMs": 245
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/collections",
+      "status": 200,
+      "durationMs": 245
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 202
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts/emerald-ape-042",
+      "status": 200,
+      "durationMs": 194
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/nfts/emerald-ape-042/related",
+      "status": 200,
+      "durationMs": 201
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "POST",
+      "resource": "/api/cart/items",
+      "status": 200,
+      "durationMs": 198
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/cart",
+      "status": 200,
+      "durationMs": 193
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "GET",
+      "resource": "/api/recommendations",
+      "status": 200,
+      "durationMs": 191
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "method": "POST",
+      "resource": "/api/quotes",
+      "status": 200,
+      "durationMs": 195
+    },
+    {
+      "width": 1440,
       "run": 3,
       "method": "GET",
       "resource": "/api/session",
       "status": 200,
-      "durationMs": 267
+      "durationMs": 246
     },
     {
       "width": 1440,
@@ -534,7 +534,7 @@
       "method": "GET",
       "resource": "/api/nfts",
       "status": 200,
-      "durationMs": 266
+      "durationMs": 245
     },
     {
       "width": 1440,
@@ -542,7 +542,7 @@
       "method": "GET",
       "resource": "/api/collections",
       "status": 200,
-      "durationMs": 266
+      "durationMs": 245
     },
     {
       "width": 1440,
@@ -550,7 +550,7 @@
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
-      "durationMs": 206
+      "durationMs": 203
     },
     {
       "width": 1440,
@@ -558,7 +558,7 @@
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042",
       "status": 200,
-      "durationMs": 198
+      "durationMs": 209
     },
     {
       "width": 1440,
@@ -566,7 +566,7 @@
       "method": "GET",
       "resource": "/api/nfts/emerald-ape-042/related",
       "status": 200,
-      "durationMs": 188
+      "durationMs": 200
     },
     {
       "width": 1440,
@@ -574,7 +574,7 @@
       "method": "POST",
       "resource": "/api/cart/items",
       "status": 200,
-      "durationMs": 196
+      "durationMs": 198
     },
     {
       "width": 1440,
@@ -582,7 +582,7 @@
       "method": "GET",
       "resource": "/api/cart",
       "status": 200,
-      "durationMs": 187
+      "durationMs": 191
     },
     {
       "width": 1440,
@@ -590,7 +590,7 @@
       "method": "GET",
       "resource": "/api/recommendations",
       "status": 200,
-      "durationMs": 199
+      "durationMs": 186
     },
     {
       "width": 1440,
@@ -598,73 +598,73 @@
       "method": "POST",
       "resource": "/api/quotes",
       "status": 200,
-      "durationMs": 204
+      "durationMs": 190
     }
   ],
   "navigation": [
     {
       "width": 390,
       "operation": "Início carregado (navegação completa)",
-      "medianMs": 941,
-      "minMs": 940,
-      "maxMs": 1084
+      "medianMs": 446,
+      "minMs": 419,
+      "maxMs": 486
     },
     {
       "width": 390,
       "operation": "Início → Detalhe (SPA)",
-      "medianMs": 43,
-      "minMs": 40,
-      "maxMs": 46
+      "medianMs": 60,
+      "minMs": 57,
+      "maxMs": 71
     },
     {
       "width": 390,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "medianMs": 1064,
-      "minMs": 1052,
-      "maxMs": 1075
+      "medianMs": 1773,
+      "minMs": 1771,
+      "maxMs": 1868
     },
     {
       "width": 1440,
       "operation": "Início carregado (navegação completa)",
-      "medianMs": 998,
-      "minMs": 961,
-      "maxMs": 1016
+      "medianMs": 444,
+      "minMs": 427,
+      "maxMs": 463
     },
     {
       "width": 1440,
       "operation": "Início → Detalhe (SPA)",
-      "medianMs": 58,
-      "minMs": 55,
-      "maxMs": 124
+      "medianMs": 47,
+      "minMs": 45,
+      "maxMs": 55
     },
     {
       "width": 1440,
       "operation": "Detalhe → Carrinho (mutação + SPA + cotação)",
-      "medianMs": 1087,
-      "minMs": 1069,
-      "maxMs": 1102
+      "medianMs": 1760,
+      "minMs": 1755,
+      "maxMs": 1858
     }
   ],
   "api": [
     {
       "resource": "GET /api/session",
       "samples": 6,
-      "medianMs": 267
+      "medianMs": 260
     },
     {
       "resource": "GET /api/nfts",
       "samples": 6,
-      "medianMs": 266
+      "medianMs": 259
     },
     {
       "resource": "GET /api/collections",
       "samples": 6,
-      "medianMs": 266
+      "medianMs": 259
     },
     {
       "resource": "GET /api/cart",
       "samples": 12,
-      "medianMs": 206
+      "medianMs": 199
     },
     {
       "resource": "GET /api/nfts/emerald-ape-042",
@@ -674,7 +674,7 @@
     {
       "resource": "GET /api/nfts/emerald-ape-042/related",
       "samples": 6,
-      "medianMs": 197
+      "medianMs": 202
     },
     {
       "resource": "POST /api/cart/items",
@@ -684,12 +684,12 @@
     {
       "resource": "GET /api/recommendations",
       "samples": 6,
-      "medianMs": 196
+      "medianMs": 193
     },
     {
       "resource": "POST /api/quotes",
       "samples": 6,
-      "medianMs": 204
+      "medianMs": 196
     }
   ]
 }

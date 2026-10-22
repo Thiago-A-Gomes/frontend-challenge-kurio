@@ -1,0 +1,449 @@
+{
+  "date": "2026-10-22T01:23:28.579Z",
+  "startedAt": "2026-10-22T01:20:57.417Z",
+  "complete": true,
+  "configurationVersion": 4,
+  "environment": {
+    "node": "v22.23.4",
+    "chrome": "155.0.8059.80",
+    "lighthouse": "13.5.0",
+    "puppeteer": "25.15.0",
+    "playwright": "^1.64.1",
+    "platform": "win32",
+    "cpu": "AMD Ryzen 5 5600G with Radeon Graphics         ",
+    "base": "http://127.0.0.1:5191",
+    "cache": "HTTP cleared before every sample; Service Worker preinstalled",
+    "mocks": "reset before every sample; default scenario; 180ms latency"
+  },
+  "build": [
+    {
+      "name": "AccountLayout-DQDWE9me.js",
+      "sha256": "559b33da98ea31616c434d4dbb7ed82c21c10b84b976ffc91232422b271617a8"
+    },
+    {
+      "name": "AuthPage-CszKz9xV.js",
+      "sha256": "7429aa96210cb7f9890e188602f377860c17f919c4c241df351ca3a4275d196f"
+    },
+    {
+      "name": "browser-Cb7uJltP.js",
+      "sha256": "4c206a20879ec57fee4dfddbab8436bb09821eafb687888e6fa73243f22142c2"
+    },
+    {
+      "name": "button-BKUObTA4.js",
+      "sha256": "ffbd1a1b7b0e35134e10789e1f22454075a5d73fd4c6cbabf99147c651e6962b"
+    },
+    {
+      "name": "CartPage-CV1vaCiQ.js",
+      "sha256": "dbb80c8dfaec57612ad59647818fc6f65a1bb1b0ab490b9751f7a50edd528d56"
+    },
+    {
+      "name": "CheckoutPage-BJ-5LP8m.js",
+      "sha256": "d86622c47e81906f98a31b3cda7635c44fb0d3fe3a85b5699fdfa686151ac203"
+    },
+    {
+      "name": "CollectionRecommendations-qCd8cuEe.js",
+      "sha256": "6220d1ab2768d8a66abee532fd9e3541cf2c3ede9570d903e52f77ef4d16ff2c"
+    },
+    {
+      "name": "ComingSoonPage-CTEsK7fO.js",
+      "sha256": "7041c1bd5f6e1aded56c2fe2263d2190195efed97805b67ff5cf1ca133dfbf9f"
+    },
+    {
+      "name": "FinancialSummary-ClDiHCuI.js",
+      "sha256": "7ae8d1f0a4b741f9875a1a8da51ef9797e2f27911d46e69eeb4fab0532b118c0"
+    },
+    {
+      "name": "index-BEMYMIJ8.css",
+      "sha256": "52caa3ecca45540b0ea2136d6d418c0abcc20049434ac16b3e0e738a4706fbe6"
+    },
+    {
+      "name": "index-BX6FNL3i.js",
+      "sha256": "33c28bdce3ec873b760c5f66ee4164ade8ca0229db4701665751205a833424c5"
+    },
+    {
+      "name": "index-C0EKrOg6.js",
+      "sha256": "94799d4411ef3df250e78c2d3e9c5392e89d9fc92798efa1b9a70625aecbd59b"
+    },
+    {
+      "name": "index-xIJNk0PF.js",
+      "sha256": "0e17faeecbff4d028ce7f6f33b6104b4d6f317f98a8796d2669ed3a1aa10a4a7"
+    },
+    {
+      "name": "input-IcPB1Mpm.js",
+      "sha256": "225f8744f3946ff14afe06264f6617bf773952104dcbf0236eb48333d1fc838f"
+    },
+    {
+      "name": "NftDetailsPage-Ddap9Y7m.js",
+      "sha256": "8542c01d7e103ce0092ea05ccf5e2a84bf740ac927cef8c2f8e9d5d594d1d97f"
+    },
+    {
+      "name": "OrderPage-BnTpIgiF.js",
+      "sha256": "49d68ab2ec0fa2837e4755330131dbe44821444ca42c61e0a92b5210d0392263"
+    },
+    {
+      "name": "PasswordInput-BfeGLV1k.js",
+      "sha256": "b96ce1730c18be946f073e4c74e858beeaf8348b7b1e8f170eeaedfc2b9ab1d7"
+    },
+    {
+      "name": "ProfilePage-B8TVEAak.js",
+      "sha256": "2de7eb2d56fdcb40b8cd73be43035fa5bd9d12c2587b2c86d8954cfb1309556f"
+    },
+    {
+      "name": "WalletsPage-DI3lZPSM.js",
+      "sha256": "9d135ba94e9e43593f4804012e95856fd569f02af5c872eda35c0e4de0bcb265"
+    }
+  ],
+  "invalidAttempts": [],
+  "runs": [
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3305.15095,
+      "cls": 0,
+      "tbtMs": 43
+    },
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3342.0698500000008,
+      "cls": 0,
+      "tbtMs": 30
+    },
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3326.824125,
+      "cls": 0,
+      "tbtMs": 30
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 779.9229,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 785.96205,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 779.56335,
+      "cls": 0.02887312844759653,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3241.8140000000003,
+      "cls": 0.01196131801947877,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3238.9776,
+      "cls": 0.01196131801947877,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3236.6859999999997,
+      "cls": 0.01196131801947877,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 756.5340000000001,
+      "cls": 0.007052272130286315,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 731.4443999999999,
+      "cls": 0.007052272130286315,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 100,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 737.4996000000001,
+      "cls": 0.007052272130286315,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "mobile",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 78,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3160.1323249999996,
+      "cls": 0.2526961198976786,
+      "tbtMs": 10
+    },
+    {
+      "page": "criadores",
+      "profile": "mobile",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 78,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3159.0757999999996,
+      "cls": 0.2526961198976786,
+      "tbtMs": 6
+    },
+    {
+      "page": "criadores",
+      "profile": "mobile",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 78,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3154.3528000000006,
+      "cls": 0.2526961198976786,
+      "tbtMs": 5
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 1,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 700.9136000000001,
+      "cls": 0.22598021189037734,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 2,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 701.256725,
+      "cls": 0.22598021189037734,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "run": 3,
+      "version": "13.5.0",
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 697.462725,
+      "cls": 0.1971070834427808,
+      "tbtMs": 0
+    }
+  ],
+  "medians": [
+    {
+      "page": "inicio",
+      "profile": "mobile",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3326.824125,
+      "cls": 0,
+      "tbtMs": 30
+    },
+    {
+      "page": "inicio",
+      "profile": "desktop",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 779.9229,
+      "cls": 0,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "mobile",
+      "scores": {
+        "performance": 90,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3238.9776,
+      "cls": 0.01196131801947877,
+      "tbtMs": 0
+    },
+    {
+      "page": "detalhe",
+      "profile": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 97,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 737.4996000000001,
+      "cls": 0.007052272130286315,
+      "tbtMs": 0
+    },
+    {
+      "page": "criadores",
+      "profile": "mobile",
+      "scores": {
+        "performance": 78,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 3159.0757999999996,
+      "cls": 0.2526961198976786,
+      "tbtMs": 6
+    },
+    {
+      "page": "criadores",
+      "profile": "desktop",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcpMs": 700.9136000000001,
+      "cls": 0.22598021189037734,
+      "tbtMs": 0
+    }
+  ]
+}
